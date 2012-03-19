@@ -1,6 +1,6 @@
->------------ FISPO - project ------------<
+<>------------ FISPO - project ------------<>
 rails-ftw-v0.10a-1.9.3-3.2.1.exe for windows 
->------------ ruby 193.p0 ----------------<
+<>------------ ruby 193.p0 ----------------<>
 Using rails (3.2.1) 
 Using rake (0.9.2.2)
 Using i18n (0.6.0)
