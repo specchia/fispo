@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  edition_id: 1
+  sub_section_id: 1
+  ordinamento: 1
+  se_sommario: false
+  riassunto: MyText
+  titolo: MyText
+  testo: MyText
+  riferimento: MyString
+  se_visible_web: false
+  data_scadenza: 2012-03-20 21:29:07
+  se_visible_data: false
+  se_visible_newsletter: false
+  se_protetto: false
+  immagine_url: MyString
+  titolo_no_format: MyText
+  testo_no_format: MyText
+  riassunto_no_format: MyText
+
+two:
+  edition_id: 1
+  sub_section_id: 1
+  ordinamento: 1
+  se_sommario: false
+  riassunto: MyText
+  titolo: MyText
+  testo: MyText
+  riferimento: MyString
+  se_visible_web: false
+  data_scadenza: 2012-03-20 21:29:07
+  se_visible_data: false
+  se_visible_newsletter: false
+  se_protetto: false
+  immagine_url: MyString
+  titolo_no_format: MyText
+  testo_no_format: MyText
+  riassunto_no_format: MyText

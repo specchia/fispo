@@ -1,0 +1,85 @@
+<%= form_for(@content) do |f| %>
+  <% if @content.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@content.errors.count, "error") %> prohibited this content from being saved:</h2>
+
+      <ul>
+      <% @content.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :edition_id %><br />
+    <%= f.number_field :edition_id %>
+  </div>
+  <div class="field">
+    <%= f.label :sub_section_id %><br />
+    <%= f.number_field :sub_section_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ordinamento %><br />
+    <%= f.number_field :ordinamento %>
+  </div>
+  <div class="field">
+    <%= f.label :se_sommario %><br />
+    <%= f.check_box :se_sommario %>
+  </div>
+  <div class="field">
+    <%= f.label :riassunto %><br />
+    <%= f.text_area :riassunto %>
+  </div>
+  <div class="field">
+    <%= f.label :titolo %><br />
+    <%= f.text_area :titolo %>
+  </div>
+  <div class="field">
+    <%= f.label :testo %><br />
+    <%= f.text_area :testo %>
+  </div>
+  <div class="field">
+    <%= f.label :riferimento %><br />
+    <%= f.text_field :riferimento %>
+  </div>
+  <div class="field">
+    <%= f.label :se_visible_web %><br />
+    <%= f.check_box :se_visible_web %>
+  </div>
+  <div class="field">
+    <%= f.label :data_scadenza %><br />
+    <%= f.datetime_select :data_scadenza %>
+  </div>
+  <div class="field">
+    <%= f.label :se_visible_data %><br />
+    <%= f.check_box :se_visible_data %>
+  </div>
+  <div class="field">
+    <%= f.label :se_visible_newsletter %><br />
+    <%= f.check_box :se_visible_newsletter %>
+  </div>
+  <div class="field">
+    <%= f.label :se_protetto %><br />
+    <%= f.check_box :se_protetto %>
+  </div>
+  <div class="field">
+    <%= f.label :immagine_url %><br />
+    <%= f.text_field :immagine_url %>
+  </div>
+  <div class="field">
+    <%= f.label :titolo_no_format %><br />
+    <%= f.text_area :titolo_no_format %>
+  </div>
+  <div class="field">
+    <%= f.label :testo_no_format %><br />
+    <%= f.text_area :testo_no_format %>
+  </div>
+  <div class="field">
+    <%= f.label :riassunto_no_format %><br />
+    <%= f.text_area :riassunto_no_format %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

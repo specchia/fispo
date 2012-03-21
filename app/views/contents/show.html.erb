@@ -1,0 +1,90 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Edition:</b>
+  <%= @content.edition_id %>
+</p>
+
+<p>
+  <b>Sub section:</b>
+  <%= @content.sub_section_id %>
+</p>
+
+<p>
+  <b>Ordinamento:</b>
+  <%= @content.ordinamento %>
+</p>
+
+<p>
+  <b>Se sommario:</b>
+  <%= @content.se_sommario %>
+</p>
+
+<p>
+  <b>Riassunto:</b>
+  <%= @content.riassunto %>
+</p>
+
+<p>
+  <b>Titolo:</b>
+  <%= @content.titolo %>
+</p>
+
+<p>
+  <b>Testo:</b>
+  <%= @content.testo %>
+</p>
+
+<p>
+  <b>Riferimento:</b>
+  <%= @content.riferimento %>
+</p>
+
+<p>
+  <b>Se visible web:</b>
+  <%= @content.se_visible_web %>
+</p>
+
+<p>
+  <b>Data scadenza:</b>
+  <%= @content.data_scadenza %>
+</p>
+
+<p>
+  <b>Se visible data:</b>
+  <%= @content.se_visible_data %>
+</p>
+
+<p>
+  <b>Se visible newsletter:</b>
+  <%= @content.se_visible_newsletter %>
+</p>
+
+<p>
+  <b>Se protetto:</b>
+  <%= @content.se_protetto %>
+</p>
+
+<p>
+  <b>Immagine url:</b>
+  <%= @content.immagine_url %>
+</p>
+
+<p>
+  <b>Titolo no format:</b>
+  <%= @content.titolo_no_format %>
+</p>
+
+<p>
+  <b>Testo no format:</b>
+  <%= @content.testo_no_format %>
+</p>
+
+<p>
+  <b>Riassunto no format:</b>
+  <%= @content.riassunto_no_format %>
+</p>
+
+
+<%= link_to 'Edit', edit_content_path(@content) %> |
+<%= link_to 'Back', contents_path %>

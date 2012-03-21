@@ -1,0 +1,89 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  group_id: 1
+  organization_id: 1
+  codice: 1
+  nome: MyString
+  titolo: MyString
+  soc: MyString
+  sede: MyString
+  indirizzo: MyString
+  telefono: MyString
+  fax: MyString
+  mail: MyString
+  telefono2: MyString
+  login: MyString
+  mail2: MyString
+  pwd: MyString
+  registrato: MyString
+  data: MyString
+  datascadenza: 2012-03-20 18:16:55
+  cap: MyString
+  prov: MyString
+  note: MyText
+  sez: MyString
+  iva_: MyString
+  codicefiscale: MyString
+  partitaiva: MyString
+  annotazioni: MyText
+  tariffa_precedente: 1.5
+  sconto_precedente: MyText
+  iva_precedente: MyText
+  pagamento_precedente: MyString
+  data_ultimo_pagamento: 2012-03-20 18:16:55
+  data_accredito: 2012-03-20 18:16:55
+  anno_competenza: 1
+  conferma_registrazione: false
+  abbonato: false
+  disabilitato: false
+  parent: 1
+  crediti: 1
+  power_user: false
+  num_reg_coni: MyString
+  forum_redattore: false
+  forum_notifica: false
+
+two:
+  group_id: 1
+  organization_id: 1
+  codice: 1
+  nome: MyString
+  titolo: MyString
+  soc: MyString
+  sede: MyString
+  indirizzo: MyString
+  telefono: MyString
+  fax: MyString
+  mail: MyString
+  telefono2: MyString
+  login: MyString
+  mail2: MyString
+  pwd: MyString
+  registrato: MyString
+  data: MyString
+  datascadenza: 2012-03-20 18:16:55
+  cap: MyString
+  prov: MyString
+  note: MyText
+  sez: MyString
+  iva_: MyString
+  codicefiscale: MyString
+  partitaiva: MyString
+  annotazioni: MyText
+  tariffa_precedente: 1.5
+  sconto_precedente: MyText
+  iva_precedente: MyText
+  pagamento_precedente: MyString
+  data_ultimo_pagamento: 2012-03-20 18:16:55
+  data_accredito: 2012-03-20 18:16:55
+  anno_competenza: 1
+  conferma_registrazione: false
+  abbonato: false
+  disabilitato: false
+  parent: 1
+  crediti: 1
+  power_user: false
+  num_reg_coni: MyString
+  forum_redattore: false
+  forum_notifica: false
