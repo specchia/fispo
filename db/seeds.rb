@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require "#{Rails.root}/db/seeds.rb"
+namespace :db do
+
+puts 'SETTING UP DEFAULT Account LOGIN'
+account = Account.create!(:username => 'spec', :email => 'spec@email.it', :password => '0', :password_confirmation => '0')
+puts 'New Account created: ' << account.username
+  end

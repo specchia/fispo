@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(:version => 20120322153048) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
-    t.integer  "user_id"
     t.string   "username"
   end
 
@@ -107,88 +106,5 @@ ActiveRecord::Schema.define(:version => 20120322153048) do
     t.datetime "updated_at",             :null => false
     t.integer  "account_id"
   end
-
-  create_table "utenti", :force => true do |t|
-    t.string   "Codice",                  :limit => 50
-    t.string   "IVA",                     :limit => 16
-    t.string   "Nome"
-    t.string   "Titolo"
-    t.string   "Soc"
-    t.string   "Organismo",               :limit => 50
-    t.string   "SiglaOrganismo",          :limit => 50
-    t.string   "Affiliata"
-    t.string   "Sede"
-    t.string   "Indirizzo",               :limit => 50
-    t.string   "Telefono"
-    t.string   "Fax"
-    t.string   "Mail"
-    t.string   "Login"
-    t.string   "Pwd",                     :limit => 8
-    t.string   "Registrato",              :limit => 5
-    t.string   "Data",                    :limit => 50
-    t.date     "DataScadenza"
-    t.string   "Cap",                     :limit => 50
-    t.string   "Prov",                    :limit => 25
-    t.text     "Note",                    :limit => 2147483647
-    t.string   "pagato",                  :limit => 10
-    t.datetime "datapag"
-    t.text     "notepag",                 :limit => 2147483647
-    t.string   "N_FATT",                  :limit => 10
-    t.string   "SEZ",                     :limit => 10
-    t.string   "NUMERO_PI_O_CF",          :limit => 15
-    t.string   "CampoUnAuto",             :limit => 50
-    t.string   "TARIFFA",                 :limit => 50
-    t.string   "SC",                      :limit => 50
-    t.string   "IMP",                     :limit => 50
-    t.string   "IVA_",                    :limit => 16
-    t.string   "TOTALE_FATTURA",          :limit => 20
-    t.string   "PAGAMENTO",               :limit => 50
-    t.text     "COMUNICAZIONI",           :limit => 2147483647
-    t.string   "CodiceFiscale",           :limit => 16
-    t.string   "PartitaIva",              :limit => 11
-    t.integer  "IDUtentePrincipale"
-    t.text     "Annotazioni",             :limit => 2147483647
-    t.decimal  "TariffaPrecedente",                             :precision => 19, :scale => 4, :default => 0.0
-    t.float    "ScontoPrecedente",                                                             :default => 0.0
-    t.float    "IvaPrecedente",                                                                :default => 0.0
-    t.string   "PagamentoPrecedente",     :limit => 100
-    t.date     "DataUltimoPagamento"
-    t.date     "DataAccredito"
-    t.integer  "AnnoCompetenza"
-    t.binary   "ConfermaRegistrazione",   :limit => 255
-    t.binary   "Abbonato",                :limit => 255
-    t.binary   "Disabilitato",            :limit => 255
-    t.string   "CodiceSconto",            :limit => 5
-    t.string   "MailSecondaria"
-    t.integer  "Parent",                                                                       :default => 0
-    t.integer  "Crediti",                                                                      :default => 50
-    t.string   "Testo1",                  :limit => 100
-    t.string   "Testo2",                  :limit => 100
-    t.string   "Testo3",                  :limit => 100
-    t.float    "Numero1",                                                                      :default => 0.0
-    t.float    "Numero2",                                                                      :default => 0.0
-    t.float    "Numero3",                                                                      :default => 0.0
-    t.datetime "Data1"
-    t.datetime "Data2"
-    t.datetime "Data3"
-    t.binary   "Flag1",                   :limit => 255
-    t.binary   "Flag2",                   :limit => 255
-    t.binary   "Flag3",                   :limit => 255
-    t.binary   "PowerUser",               :limit => 255
-    t.string   "numeroregistrazioneconi", :limit => 15,                                        :default => "0"
-    t.binary   "FORUM_REDATTORE",         :limit => 255
-    t.binary   "FORUM_NOTIFICA",          :limit => 255
-    t.integer  "gruppi_utenti_id",        :limit => 2
-  end
-
-  add_index "utenti", ["Codice"], :name => "Codice"
-  add_index "utenti", ["CodiceFiscale"], :name => "CodiceFiscale"
-  add_index "utenti", ["CodiceSconto"], :name => "CodiceSconto"
-  add_index "utenti", ["IDUtentePrincipale"], :name => "IDUtentePrincipale"
-  add_index "utenti", ["NUMERO_PI_O_CF"], :name => "NUMERO_PI_O_CF"
-  add_index "utenti", ["Numero1"], :name => "Numero1"
-  add_index "utenti", ["Numero2"], :name => "Numero2"
-  add_index "utenti", ["Numero3"], :name => "Numero3"
-  add_index "utenti", ["numeroregistrazioneconi"], :name => "NumeroRegistrazioneConi"
 
 end

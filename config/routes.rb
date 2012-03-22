@@ -1,16 +1,15 @@
 Fispo::Application.routes.draw do
-
+  root :to => "home#index"
 
 
   devise_for :accounts
-
-  resources :contents
+  resources :accounts
   resources :contents
   resources :users
 
-  devise_for :accounts
-    devise_for :users
-    devise_for :contents
+
+   # devise_for :users
+    #devise_for :contents
 
 
 
@@ -64,7 +63,7 @@ Fispo::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/_index.html.
-  root :to => 'contents#index'
+
 
   # See how all your routes lay out with "rake routes"
 
