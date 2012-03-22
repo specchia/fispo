@@ -36,4 +36,7 @@ Fispo::Application.configure do
   config.assets.debug = true
   #devise
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.after_sign_in_path_for = { :host => 'localhost:3000/contact' }
+  config.after_sign_out_path_for = { :host => 'localhost:3000/about' }
+
 end

@@ -1,4 +1,15 @@
 Fispo::Application.routes.draw do
+
+  get "page/home"
+
+  get "page/index"
+
+  get "page/about"
+
+  get "page/contact"
+
+    root :to => 'page#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
