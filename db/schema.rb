@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120320202907) do
+ActiveRecord::Schema.define(:version => 20120322153048) do
 
   create_table "accounts", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -31,10 +31,12 @@ ActiveRecord::Schema.define(:version => 20120320202907) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.integer  "user_id"
+    t.string   "username"
   end
 
   add_index "accounts", ["email"], :name => "index_accounts_on_email"
   add_index "accounts", ["reset_password_token"], :name => "index_accounts_on_reset_password_token"
+  add_index "accounts", ["username"], :name => "index_accounts_on_username", :unique => true
 
   create_table "contents", :force => true do |t|
     t.integer  "edition_id"
@@ -103,6 +105,7 @@ ActiveRecord::Schema.define(:version => 20120320202907) do
     t.boolean  "forum_notifica"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
+    t.integer  "account_id"
   end
 
   create_table "utenti", :force => true do |t|
@@ -152,9 +155,9 @@ ActiveRecord::Schema.define(:version => 20120320202907) do
     t.date     "DataUltimoPagamento"
     t.date     "DataAccredito"
     t.integer  "AnnoCompetenza"
-    t.binary   "ConfermaRegistrazione",   :limit => 1
-    t.binary   "Abbonato",                :limit => 1
-    t.binary   "Disabilitato",            :limit => 1
+    t.binary   "ConfermaRegistrazione",   :limit => 255
+    t.binary   "Abbonato",                :limit => 255
+    t.binary   "Disabilitato",            :limit => 255
     t.string   "CodiceSconto",            :limit => 5
     t.string   "MailSecondaria"
     t.integer  "Parent",                                                                       :default => 0
@@ -168,13 +171,13 @@ ActiveRecord::Schema.define(:version => 20120320202907) do
     t.datetime "Data1"
     t.datetime "Data2"
     t.datetime "Data3"
-    t.binary   "Flag1",                   :limit => 1
-    t.binary   "Flag2",                   :limit => 1
-    t.binary   "Flag3",                   :limit => 1
-    t.binary   "PowerUser",               :limit => 1
+    t.binary   "Flag1",                   :limit => 255
+    t.binary   "Flag2",                   :limit => 255
+    t.binary   "Flag3",                   :limit => 255
+    t.binary   "PowerUser",               :limit => 255
     t.string   "numeroregistrazioneconi", :limit => 15,                                        :default => "0"
-    t.binary   "FORUM_REDATTORE",         :limit => 1
-    t.binary   "FORUM_NOTIFICA",          :limit => 1
+    t.binary   "FORUM_REDATTORE",         :limit => 255
+    t.binary   "FORUM_NOTIFICA",          :limit => 255
     t.integer  "gruppi_utenti_id",        :limit => 2
   end
 

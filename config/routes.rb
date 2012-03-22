@@ -2,6 +2,8 @@ Fispo::Application.routes.draw do
 
 
 
+  devise_for :accounts
+
   resources :contents
   resources :contents
   resources :users
