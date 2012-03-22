@@ -43,8 +43,8 @@ Fispo::Application.configure do
 
  # $ export GMAIL_SMTP_USER=username@gmail.com
  # $ export GMAIL_SMTP_PASSWORD=yourpassword
-  #Add the following to config/environments/development.rb:
-
+  # Add the following to config/environments/development.rb:
+  #
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
