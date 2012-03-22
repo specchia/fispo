@@ -1,5 +1,5 @@
 class ContentsController < ApplicationController
-   #before_filter :authenticate_account!, :except => [:show, :index]
+   before_filter :authenticate_account!, :except => [:show, :index]
   # GET /contents
   # GET /contents.json
   def index

@@ -28,6 +28,7 @@ gem 'jquery-rails'
 # To use Jbuilder templates for JSON
 gem 'jbuilder'
 gem 'devise'
+gem 'rake' ,'~> 0.9.2'
 
 # Use unicorn as the web server
 # gem 'unicorn'

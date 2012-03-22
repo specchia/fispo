@@ -13,16 +13,21 @@
 <%= javascript_include_tag :defaults %>
  <div id="account_nav">
   <% if account_signed_in? %>
-    Signed in as <%= current_account.email %>. Not you?
-    <%= link_to "Sign out", destroy_account_session_path , :method => :delete %>
+    Benvenuto <%= current_account.email %>. Non sei tu ?
+    <%= link_to "Esci", destroy_account_session_path  %> oppure
+       <%= link_to 'Cancellami', account_registration_path, :confirm => 'Sei sicuro di cancellare questo account?', :method => :delete %>
+
+
   <% else %>
-    <%= link_to "Sign up", new_account_registration_path %> or
-    <%= link_to "Sign in", new_account_session_path %>
+    <%= link_to "Registrati", new_account_registration_path %> or
+    <%= link_to "Accedi", new_account_session_path %>
   <% end %>
 </div>
 
 <%= yield %>
+<div class style="color:red">
     <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+       <p class="alert"><%= alert %>
+</div>
 </body>
 </html>
