@@ -1,0 +1,9 @@
+<h1>Home</h1>
+ <p>sto seguendo : http://ridingrails.net/devise-authentication-recover-password-email-code-kata/</p>
+<hr>
+    <% @accounts.each do |acc| %>
+    <p>Accounts: <%= acc.username %> - <%= acc.email  %> </p>
+    <p>User: <%=link_to acc.username %></p>
+    <% end %>
+<hr>
+
