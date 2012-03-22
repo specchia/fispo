@@ -1,5 +1,7 @@
 Fispo::Application.routes.draw do
 
+  resources :roles
+
   get "page/home"
 
   get "page/index"
