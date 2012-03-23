@@ -1,0 +1,105 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Group</th>
+    <th>Organization</th>
+    <th>Codice</th>
+    <th>Nome</th>
+    <th>Titolo</th>
+    <th>Soc</th>
+    <th>Sede</th>
+    <th>Indirizzo</th>
+    <th>Telefono</th>
+    <th>Fax</th>
+    <th>Mail</th>
+    <th>Telefono2</th>
+    <th>Login</th>
+    <th>Mail2</th>
+    <th>Pwd</th>
+    <th>Registrato</th>
+    <th>Data</th>
+    <th>Datascadenza</th>
+    <th>Cap</th>
+    <th>Prov</th>
+    <th>Note</th>
+    <th>Sez</th>
+    <th>Iva </th>
+    <th>Codicefiscale</th>
+    <th>Partitaiva</th>
+    <th>Annotazioni</th>
+    <th>Tariffa precedente</th>
+    <th>Sconto precedente</th>
+    <th>Iva precedente</th>
+    <th>Pagamento precedente</th>
+    <th>Data ultimo pagamento</th>
+    <th>Data accredito</th>
+    <th>Anno competenza</th>
+    <th>Conferma registrazione</th>
+    <th>Abbonato</th>
+    <th>Disabilitato</th>
+    <th>Parent</th>
+    <th>Crediti</th>
+    <th>Power user</th>
+    <th>Num reg coni</th>
+    <th>Forum redattore</th>
+    <th>Forum notifica</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.group_id %></td>
+    <td><%= user.organization_id %></td>
+    <td><%= user.codice %></td>
+    <td><%= user.nome %></td>
+    <td><%= user.titolo %></td>
+    <td><%= user.soc %></td>
+    <td><%= user.sede %></td>
+    <td><%= user.indirizzo %></td>
+    <td><%= user.telefono %></td>
+    <td><%= user.fax %></td>
+    <td><%= user.mail %></td>
+    <td><%= user.telefono2 %></td>
+    <td><%= user.login %></td>
+    <td><%= user.mail2 %></td>
+    <td><%= user.pwd %></td>
+    <td><%= user.registrato %></td>
+    <td><%= user.data %></td>
+    <td><%= user.datascadenza %></td>
+    <td><%= user.cap %></td>
+    <td><%= user.prov %></td>
+    <td><%= user.note %></td>
+    <td><%= user.sez %></td>
+    <td><%= user.iva_ %></td>
+    <td><%= user.codicefiscale %></td>
+    <td><%= user.partitaiva %></td>
+    <td><%= user.annotazioni %></td>
+    <td><%= user.tariffa_precedente %></td>
+    <td><%= user.sconto_precedente %></td>
+    <td><%= user.iva_precedente %></td>
+    <td><%= user.pagamento_precedente %></td>
+    <td><%= user.data_ultimo_pagamento %></td>
+    <td><%= user.data_accredito %></td>
+    <td><%= user.anno_competenza %></td>
+    <td><%= user.conferma_registrazione %></td>
+    <td><%= user.abbonato %></td>
+    <td><%= user.disabilitato %></td>
+    <td><%= user.parent %></td>
+    <td><%= user.crediti %></td>
+    <td><%= user.power_user %></td>
+    <td><%= user.num_reg_coni %></td>
+    <td><%= user.forum_redattore %></td>
+    <td><%= user.forum_notifica %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_user_path %>

@@ -1,0 +1,55 @@
+<h1>Listing contents</h1>
+
+<table>
+  <tr>
+    <th>Edition</th>
+    <th>Sub section</th>
+    <th>Ordinamento</th>
+    <th>Se sommario</th>
+    <th>Riassunto</th>
+    <th>Titolo</th>
+    <th>Testo</th>
+    <th>Riferimento</th>
+    <th>Se visible web</th>
+    <th>Data scadenza</th>
+    <th>Se visible data</th>
+    <th>Se visible newsletter</th>
+    <th>Se protetto</th>
+    <th>Immagine url</th>
+    <th>Titolo no format</th>
+    <th>Testo no format</th>
+    <th>Riassunto no format</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @contents.each do |content| %>
+  <tr>
+    <td><%= content.edition_id %></td>
+    <td><%= content.sub_section_id %></td>
+    <td><%= content.ordinamento %></td>
+    <td><%= content.se_sommario %></td>
+    <td><%= content.riassunto %></td>
+    <td><%= content.titolo %></td>
+    <td><%= content.testo %></td>
+    <td><%= content.riferimento %></td>
+    <td><%= content.se_visible_web %></td>
+    <td><%= content.data_scadenza %></td>
+    <td><%= content.se_visible_data %></td>
+    <td><%= content.se_visible_newsletter %></td>
+    <td><%= content.se_protetto %></td>
+    <td><%= content.immagine_url %></td>
+    <td><%= content.titolo_no_format %></td>
+    <td><%= content.testo_no_format %></td>
+    <td><%= content.riassunto_no_format %></td>
+    <td><%= link_to 'Show', content %></td>
+    <td><%= link_to 'Edit', edit_content_path(content) %></td>
+    <td><%= link_to 'Destroy', content, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Content', new_content_path %>

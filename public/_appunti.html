@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ </head>
+  <body>
+    ======================= DEVISE ====================
+   > rake  routes
+
+        new_account_session GET    /accounts/sign_in(.:format)
+            account_session POST   /accounts/sign_in(.:format)
+    destroy_account_session DELETE /accounts/sign_out(.:format)
+           account_password POST   /accounts/password(.:format)
+       new_account_password GET    /accounts/password/new(.:format)
+      edit_account_password GET    /accounts/password/edit(.:format)
+                            PUT    /accounts/password(.:format)
+cancel_account_registration GET    /accounts/cancel(.:format)
+       account_registration POST   /accounts(.:format)
+   new_account_registration GET    /accounts/sign_up(.:format)
+  edit_account_registration GET    /accounts/edit(.:format)
+                            PUT    /accounts(.:format)
+                            DELETE /accounts(.:format)
+
+  -> errore: sul SIGN_OUT no routes bla bla
+  -> aoluzione: in devise.rb
+    verso la fine cambiare il metodo DELETE in  GET
+    config.sign_out_via = :get
+
+
+  </body>
+</html>

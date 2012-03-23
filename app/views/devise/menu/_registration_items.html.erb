@@ -1,0 +1,21 @@
+ <% if account_signed_in? %>
+   Benvenuto <b><%= current_account.username %> </b> ! <br /> la tua
+
+      <span class="fs-button-wrapper">
+      <span class="fs-button-l"> </span>
+      <span class="fs-button-r"> </span>
+
+      <a class="fs-button" <%= link_to('area personale', edit_account_registration_path) %> > </a>
+   </span>
+
+
+ <% else %>
+    <span class="fs-button-wrapper">
+      <span class="fs-button-l"> </span>
+      <span class="fs-button-r"> </span>
+
+      <a class="fs-button" <%= link_to('registrati', new_account_registration_path)  %> > </a>
+   </span>
+ <% end %>
+
+<%# <p>questa guida: http://ridingrails.net/devise-authentication-recover-password-email-code-kata/</p>   %>

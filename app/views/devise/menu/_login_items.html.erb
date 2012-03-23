@@ -1,0 +1,29 @@
+<% if account_signed_in? %>
+   non sei tu?
+      <span class="fs-button-wrapper">
+      <span class="fs-button-l"> </span>
+      <span class="fs-button-r"> </span>
+
+      <a class="fs-button" <%= link_to 'esci', destroy_account_session_path, :method => 'delete' %> > </a>
+   </span>
+   <br>
+     non mi interessa più
+      <span class="fs-button-wrapper">
+      <span class="fs-button-l"> </span>
+      <span class="fs-button-r"> </span>
+
+      <a class="fs-button" <%= link_to 'cancellami', account_registration_path, :confirm => 'Sei sicuro di cancellare questo account?', :method => :delete %> >. </a>
+   </span>
+
+
+ <% else %>
+
+      <span class="fs-button-wrapper">
+      <span class="fs-button-l"> </span>
+      <span class="fs-button-r"> </span>
+      <a class="fs-button" <%= link_to 'accedi', new_account_session_path %> > </a>
+   </span>
+
+ <% end %>
+
+<%# questa guida: http://ridingrails.net/devise-authentication-recover-password-email-code-kata/ %>

@@ -36,4 +36,28 @@ Fispo::Application.configure do
   config.assets.debug = true
   #devise
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+   #   http://ridingrails.net/devise-authentication-recover-password-email-code-kata/
+  #Localhost email testing
+  #Do this in the shell you’re using to run the Rails server:
+
+ # $ export GMAIL_SMTP_USER=username@gmail.com
+ # $ export GMAIL_SMTP_PASSWORD=yourpassword
+  # Add the following to config/environments/development.rb:
+  #
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+
+ActionMailer::Base.smtp_settings = {
+  :address => "smtp.gmail.com",
+  :port => 587,
+  :authentication => :plain,
+  :domain => ENV['GMAIL_SMTP_USER'],
+  :user_name => ENV['GMAIL_SMTP_USER'],
+  :password => ENV['GMAIL_SMTP_PASSWORD'],
+}
+
 end
