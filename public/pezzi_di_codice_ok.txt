@@ -1,0 +1,23 @@
+#=================LOGIN CODICE BUONO========================
+
+<%= javascript_include_tag :defaults %>
+ <div id="account_nav">
+  <% if account_signed_in? %>
+    Benvenuto <%= current_account.username %>. Non sei tu ?
+    <%= link_to "Esci", destroy_account_session_path  %> oppure
+       <%= link_to 'Cancellami', account_registration_path, :confirm => 'Sei sicuro di cancellare questo account?', :method => :delete %>
+
+
+  <% else %>
+    <%= link_to "Registrati", new_account_registration_path %> or
+    <%= link_to "Accedi", new_account_session_path %>
+  <% end %>
+</div>
+
+
+<div class style="color:red">
+    <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %>
+</div>
+
+#==================FINE LOGIN ==============================
