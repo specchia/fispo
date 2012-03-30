@@ -38,3 +38,4 @@ gem 'rake' ,'~> 0.9.2'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+ gem "simple-navigation"

@@ -1,11 +1,30 @@
 Fispo::Application.routes.draw do
+
   root :to => "home#index"
 
+  resources :books do
+    collection do
+      get :fiction
+      get :history
+      get :sports
+    end
+  end
 
+ resources :sections
+   #match "s:id" => redirect("/sections/%{id}")
+
+resources :top_sections
   devise_for :accounts
-  resources :accounts
+ # resources :accounts
   resources :contents
   resources :users
+
+  resources :home do
+    member do
+      get :show
+      get :index
+    end
+  end
 
 
    # devise_for :users
@@ -18,7 +37,7 @@ Fispo::Application.routes.draw do
   # first created -> highest priority.
 
   # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
+  #  match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:

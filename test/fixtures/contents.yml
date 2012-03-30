@@ -2,7 +2,7 @@
 
 one:
   edition_id: 1
-  sub_section_id: 1
+  section_id: 1
   ordinamento: 1
   se_sommario: false
   riassunto: MyText
@@ -21,7 +21,7 @@ one:
 
 two:
   edition_id: 1
-  sub_section_id: 1
+  section_id: 1
   ordinamento: 1
   se_sommario: false
   riassunto: MyText

@@ -1,28 +1,22 @@
-            <div class="fs-nav-outer">
-                <div class="fs-nav-wrapper">
-                    <div class="fs-nav-inner">
-	                    <ul class="fs-hmenu">
-		                <li>
-			<a href="./new-page.html" class="active">Page 1</a>
-			<ul>
-				<li>
-                    <a href="./new-page/new-page.html">Subpage 1</a>
+ <div class="fs-bar fs-nav">
+<div class="fs-nav-outer">
+  <div class="fs-nav-wrapper">
 
-                </li>
-				<li>
-                    <a href="./new-page/new-page-2.html">Subpage 2</a>
 
-                </li>
-				<li>
-                    <a href="./new-page/new-page-3.html">Subpage 3</a>
 
-                </li>
-			</ul>
-		</li>
-		<li>
-			<a href="./pagina-blog.html">Pagina Blog</a>
-		</li>
-	</ul>
+			<%= render_navigation :level => 1 %>
+
+
+
+
+   </div>
 </div>
 </div>
+
+
+  <div class="fs-nav-wrapper">
+    <div class="fs-bar fs-snav">
+          <%= render_navigation :level =>2 %>
+    </div>
+
 </div>

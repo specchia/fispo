@@ -16,8 +16,8 @@
     <%= f.number_field :edition_id %>
   </div>
   <div class="field">
-    <%= f.label :sub_section_id %><br />
-    <%= f.number_field :sub_section_id %>
+    <%= f.label :section_id %><br />
+     <%= collection_select(:content, :section_id, Section.all, :id, :section_with_id , {:prompt => true}) %>
   </div>
   <div class="field">
     <%= f.label :ordinamento %><br />

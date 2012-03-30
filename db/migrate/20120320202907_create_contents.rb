@@ -2,7 +2,7 @@ class CreateContents < ActiveRecord::Migration
   def change
     create_table :contents do |t|
       t.integer :edition_id
-      t.integer :sub_section_id
+      t.integer :section_id
       t.integer :ordinamento
       t.boolean :se_sommario
       t.text :riassunto

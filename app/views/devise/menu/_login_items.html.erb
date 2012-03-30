@@ -1,13 +1,13 @@
 <% if account_signed_in? %>
-   non sei tu?
+   <br />ma ... non sei tu?
       <span class="fs-button-wrapper">
       <span class="fs-button-l"> </span>
       <span class="fs-button-r"> </span>
 
       <a class="fs-button" <%= link_to 'esci', destroy_account_session_path, :method => 'delete' %> > </a>
    </span>
-   <br>
-     non mi interessa più
+   <br />
+     non mi interessa
       <span class="fs-button-wrapper">
       <span class="fs-button-l"> </span>
       <span class="fs-button-r"> </span>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120322153048) do
+ActiveRecord::Schema.define(:version => 20120328160235) do
 
   create_table "accounts", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(:version => 20120322153048) do
 
   create_table "contents", :force => true do |t|
     t.integer  "edition_id"
-    t.integer  "sub_section_id"
+    t.integer  "section_id"
     t.integer  "ordinamento"
     t.boolean  "se_sommario"
     t.text     "riassunto"
@@ -57,6 +57,25 @@ ActiveRecord::Schema.define(:version => 20120322153048) do
     t.text     "riassunto_no_format"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
+  end
+
+  create_table "sections", :force => true do |t|
+    t.string   "sezione"
+    t.boolean  "protetto"
+    t.integer  "ordinamento"
+    t.integer  "top_section_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "top_sections", :force => true do |t|
+    t.string   "sezione_top"
+    t.integer  "ordinamento"
+    t.boolean  "se_visibile"
+    t.string   "immagine"
+    t.string   "style"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|

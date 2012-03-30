@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<div class="fs-post-inner fs-article">
+    <h2 class="fs-postheader"> <%# @top_sections[@section.top_section_id - 1].sezione_top  %> <%# @section.sezione %> </h2>
+        <div class="fs-postcontent">
+            <div class="fs-content-layout-wrapper layout-item-0">
+                <div class="fs-content-layout">
+                    <div class="fs-content-layout-row">
+                        <div class="fs-layout-cell layout-item-1" style="width: 100%;">
+
+
+                <%@contentz.each do |contenuto| %>
+
+                        <div class="fs-postheadericons "><img src=<%= asset_path "rails.png"%> style align="left">
+                        sezioni: <%= contenuto.section.top_section.sezione_top  %> + <%= contenuto.section.sezione  %>
+                        <h3 class="fs-postheader" > <%= contenuto.titolo %>  </h3></div>
+                        <div class="fs-postcontent" >  <b> <%= contenuto.riassunto %> </b></div>
+                        <div class="fs-postcontent" >   <%= contenuto.testo %> </div>
+
+
+                <p><a href="#"><span><span style="font-family: Verdana;">Read more</span></span></a></p>
+                          <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
