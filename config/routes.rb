@@ -2,6 +2,9 @@ Fispo::Application.routes.draw do
 
   root :to => "home#index"
 
+ get "/home/subscription"
+
+
   resources :books do
     collection do
       get :fiction
@@ -18,12 +21,21 @@ resources :top_sections
  # resources :accounts
   resources :contents
   resources :users
+   #member
 
   resources :home do
-    member do
+    collection do
       get :show
       get :index
+      get :main
+      get :subscription
+
     end
+    member do
+       get :show_article
+
+    end
+
   end
 
 

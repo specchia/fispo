@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     render :text => "Content", :layout => true
   end
     def render_01
-      render :partial => "home/sect01", :layout => true
+      render :partial => "home/sect01"
   end
 end
 

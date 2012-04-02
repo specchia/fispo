@@ -7,23 +7,20 @@
                     <div class="fs-content-layout-row">
                         <div class="fs-layout-cell layout-item-1" style="width: 100%;">
 
-
-                        <%@contentz.each do |contenuto| %>
-
+                        <%@contents.each do |contenuto| %>
                         <div class="fs-postheadericons "><img src=<%= asset_path "rails.png"%> style align="left">
-                        sezioni: <%= contenuto.section.top_section.sezione_top  %> + <%= contenuto.section.sezione  %>
+                        sezioni: <%= contenuto.section.top_section.sezione_top  %> + <%= contenuto.section.sezione  %> + <%= contenuto.id  %>
                         <h3 class="fs-postheader" > <%= contenuto.titolo %>  </h3></div>
                         <div class="fs-postcontent" >  <b> <%= contenuto.riassunto %> </b></div>
                         <div class="fs-postcontent" >   <%= contenuto.testo %> </div>
 
-
-                               <span class="fs-button-wrapper">
-                               <span class="fs-button-l"> </span>
-                               <span class="fs-button-r"> </span>
+                              <span class="fs-button-wrapper">
+                              <span class="fs-button-l"> </span>
+                              <span class="fs-button-r"> </span>
                         <%= link_to "Leggi >>", show_article_home_path(contenuto) , :action => "show_article" , :class => 'fs-button'  %>
-                               </span>
+                              </span>
 
-                          <% end %>
+                        <% end %>
                         </div>
                     </div>
                 </div>
