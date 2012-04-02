@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sezione top:</b>
+  <%= @top_section.sezione_top %>
+</p>
+
+<p>
+  <b>Ordinamento:</b>
+  <%= @top_section.ordinamento %>
+</p>
+
+<p>
+  <b>Se visibile:</b>
+  <%= @top_section.se_visibile %>
+</p>
+
+<p>
+  <b>Immagine:</b>
+  <%= @top_section.immagine %>
+</p>
+
+<p>
+  <b>Style:</b>
+  <%= @top_section.style %>
+</p>
+
+
+<%= link_to 'Edit', edit_top_section_path(@top_section) %> |
+<%= link_to 'Back', top_sections_path %>

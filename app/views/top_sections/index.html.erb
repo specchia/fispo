@@ -1,0 +1,31 @@
+<h1>Listing top_sections</h1>
+
+<table>
+  <tr>
+    <th>Sezione top</th>
+    <th>Ordinamento</th>
+    <th>Se visibile</th>
+    <th>Immagine</th>
+    <th>Style</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @top_sections.each do |top_section| %>
+  <tr>
+    <td><%= top_section.sezione_top %></td>
+    <td><%= top_section.ordinamento %></td>
+    <td><%= top_section.se_visibile %></td>
+    <td><%= top_section.immagine %></td>
+    <td><%= top_section.style %></td>
+    <td><%= link_to 'Show', top_section %></td>
+    <td><%= link_to 'Edit', edit_top_section_path(top_section) %></td>
+    <td><%= link_to 'Destroy', top_section, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Top section', new_top_section_path %>

@@ -1,0 +1,37 @@
+<%= form_for(@top_section) do |f| %>
+  <% if @top_section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@top_section.errors.count, "error") %> prohibited this top_section from being saved:</h2>
+
+      <ul>
+      <% @top_section.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sezione_top %><br />
+    <%= f.text_field :sezione_top %>
+  </div>
+  <div class="field">
+    <%= f.label :ordinamento %><br />
+    <%= f.number_field :ordinamento %>
+  </div>
+  <div class="field">
+    <%= f.label :se_visibile %><br />
+    <%= f.check_box :se_visibile %>
+  </div>
+  <div class="field">
+    <%= f.label :immagine %><br />
+    <%= f.text_field :immagine %>
+  </div>
+  <div class="field">
+    <%= f.label :style %><br />
+    <%= f.text_field :style %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

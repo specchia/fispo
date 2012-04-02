@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sezione: MyString
+  protetto: false
+  ordinamento: 1
+  section_id: 1
+
+two:
+  sezione: MyString
+  protetto: false
+  ordinamento: 1
+  section_id: 1

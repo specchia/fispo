@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <i>id:</i>
+  <%= @section.id %>
+</p>
+<p>
+  <b>Sezione:</b>
+  <%= @section.sezione %>
+</p>
+
+ <%# debug params %>
+<p>
+  <b>Protetto:</b>
+  <%= @section.protetto %>
+</p>
+
+<p>
+  <b>Ordinamento:</b>
+  <%= @section.ordinamento %>
+</p>
+
+<p>
+  <b>Section:</b>
+  <%= @top_sections[@section.top_section_id - 1].sezione_top  %>
+</p>
+
+
+<%= link_to 'Edit', edit_section_path(@section) %> |
+<%= link_to 'Back', sections_path %> |
+<%= link_to 'New', new_section_path %>
