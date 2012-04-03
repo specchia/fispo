@@ -1,4 +1,3 @@
-BAUUUU
 <p id="notice"><%= notice %></p>
 <div class="fs-post-inner fs-article">
     <h2 class="fs-postheader"> <%# @top_sections[@section.top_section_id - 1].sezione_top  %> <%# @section.sezione %> </h2>
@@ -20,7 +19,8 @@ BAUUUU
                            <span class="fs-button-wrapper">
                            <span class="fs-button-l"> </span>
                            <span class="fs-button-r"> </span>
-                     <%= link_to "Indietro", home_path(contenuto) , :action => "show" , :class => 'fs-button'  %>
+                     <%= link_to "Indietro", :back , :class => 'fs-button'  %>
+
                            </span>
 
                           <% end %>
@@ -30,3 +30,4 @@ BAUUUU
             </div>
         </div>
     </div>
+</div>

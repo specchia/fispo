@@ -29,6 +29,9 @@ resources :top_sections
       get :index
       get :main
       get :subscription
+      get :vademecum
+      get :modulistica
+
 
     end
     member do

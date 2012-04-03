@@ -1,6 +1,6 @@
 <h1>Listing sections</h1>
 
-<table>
+<table class ='xtable'>
   <tr>
   <th>id: </th>
     <th>Sezione</th>
@@ -13,16 +13,18 @@
   </tr>
 
 <% @sections.each do |section| %>
-  <tr>
+   <tr class="<%= cycle('row', 'alt') %>">
    <td> <%= section.id %> </td>
     <td><%= section.sezione %></td>
     <td><%= section.protetto %></td>
     <td><%= section.ordinamento %></td>
     <td><%= @top_sections[section.top_section_id.to_i - 1].sezione_top %>            </td>
 
-    <td><%= link_to 'Show', section %></td>
-    <td><%= link_to 'Edit', edit_section_path(section) %></td>
-    <td><%= link_to 'Destroy', section, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to image_tag("ico_showb.png", :size=> "16x16" ), section %></td>
+    <td><%= link_to image_tag("ico_edit.png", :size=> "16x16" ) , edit_section_path(section) %></td>
+    <td><%= link_to image_tag("ico_delb.png", :size=> "16x16" ) , section, confirm: 'Vuoi cancellare il record?', method: :delete  %></td>
+
+
   </tr>
 <% end %>
 </table>

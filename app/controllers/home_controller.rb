@@ -20,9 +20,10 @@ class HomeController < ApplicationController
     end
   def show_article
       if account_signed_in?
+
         @section = Section.find(params[:id])
         @top_sections = TopSection.all
-        @contents =   Content.find(:all, :conditions => ["section_id=?", params[:id]], :include => [:section,:top_section])
+        @contents =   Content.find(:all, :conditions => ["id=?", params[:id]], :include => [:section,:top_section])
       else
          render  "home/subscription"
       end
@@ -30,8 +31,16 @@ class HomeController < ApplicationController
 
   def subscription
 
-
-
   end
+  def vademecum
+
+        @contents =   Content.find(:all, :conditions => ["section_id=?",16], :include => [:section,:top_section])
+  end
+  def modulistica
+            @section = Section.find(params[:id])
+        @top_sections = TopSection.all
+        @contents =   Content.find(:all, :conditions => ["section_id=?", params[:id]], :include => [:section,:top_section])
+  end
+
 end
 
