@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div class="fs-post-inner fs-article">
+    <h2 class="fs-postheader"> <%# @top_sections[@section.top_section_id - 1].sezione_top  %> <%# @section.sezione %> </h2>
+        <div class="fs-postcontent">
+            <div class="fs-content-layout-wrapper layout-item-0">
+                <div class="fs-content-layout">
+                    <div class="fs-content-layout-row">
+                        <div class="fs-layout-cell layout-item-1" style="width: 100%;">
+                             vade me cum
+                        <%@contents.each do |contenuto| %>
+                        <div class="fs-postheadericons "><img src=<%= asset_path "rails.png"%> style align="left">
+                        sezioni: <%= contenuto.section.top_section.sezione_top  %> + <%= contenuto.section.sezione  %> + <%= contenuto.id  %>
+                        <h3 class="fs-postheader" > <%= contenuto.titolo %>  </h3></div>
+                        <div class="fs-postcontent" >  <b> <%= contenuto.riassunto %> </b></div>
+                        <div class="fs-postcontent" >   <%= contenuto.testo %> </div>
+
+                              <span class="fs-button-wrapper">
+                              <span class="fs-button-l"> </span>
+                              <span class="fs-button-r"> </span>
+                        <%= link_to "Leggi >>", show_article_home_path(contenuto) , :action => "show_article" , :class => 'fs-button'  %>
+                              </span>
+
+                        <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
