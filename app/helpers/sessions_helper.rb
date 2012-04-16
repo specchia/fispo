@@ -32,6 +32,21 @@ module SessionsHelper
     #signed_in? && (current_user.is_any_of? :admin, :manager, :collaboratore)
   end
 
+  def can_content?(content_id)
+    if !signed_in?
+        return false 
+    end
+#TODO: verificare se un utente puo modifcare il contenuto di una news
+#per il momento non c'è un field per tracciare chi è l'autore del contenuto
+#in ogni modo ne possiamo creare uno. Pero che succede per gli altri nel passato?
+#prevedere che il campo sia Null
+#    news = Content.find(:first, :conditions => [ "id = ?", content_id])
+#    if news and news.account_id = current_account.id
+#        return true
+#    end
+    return signin_and_collaboratore?
+  end
+
   def get_fisco_user
     if signed_in_and_master?
         User.find(1)
