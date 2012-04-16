@@ -48,14 +48,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #          :highlights_on - if autohighlighting is turned off and/or you want to explicitly specify
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>. 
-      primary.item :users, 'Books(x test)', books_path do |sub_nav|
-      sub_nav.item :fiction, 'Fiction',  fiction_books_path
-      sub_nav.item :history, 'History', history_books_path
-      sub_nav.item :sports, 'Sports', sports_books_path
-      primary.dom_class = 'fs-hmenu'
-      sub_nav.dom_class = 'fs-hmenus'
 
-    end
     # Add an item which has a sub navigation (same params, but with block)
    # primary.item :key_2, 'name2', url, options do |sub_nav|
 
@@ -87,21 +80,23 @@ SimpleNavigation::Configuration.run do |navigation|
           sub_nav.item :s_2, 'Approfondimenti','/home/2'
           sub_nav.item :s_5, 'Eventi','/home/5'
           sub_nav.item :s_6, 'Quesiti','/home/6'
-          sub_nav.item :s_7, 'Abbonamenti',subscription_home_index_path
-
+          sub_nav.item :v_0, 'Abbonamenti',subscription_home_index_path
+          sub_nav.item :special, '' , main_home_index_path , :highlights_on => /home\/(\d)+\/show_article/
+         # sub_nav.item :special, 'Ritorna' , main_home_index_path,    :highlights_on => /home\/[0-9]+\/show_article/
+         #  sub_nav.item :v_1, 'Ritorna' , main_home_index_path, /home\/[0-9]+\/show_article/)
           primary.dom_class = 'fs-hmenu'
           sub_nav.dom_class = 'fs-hmenus'
         end
 
-        primary.item :home2, 'Vademecum', main_home_index_path , :highlights_on => :subpath do |sub_nav|
+        primary.item :home2, 'Vademecum', vademecum_home_index_path , :highlights_on => :subpath do |sub_nav|
           sub_nav.item :s_16, "Vademecum 'Sinibaldi'",'/home/16'
           sub_nav.item :s_17, 'Guide','/home/17'
-          sub_nav.item :s_17, 'Tee','/home/17'
+          sub_nav.item :s_18, 'Test','/home/18'
 
           primary.dom_class = 'fs-hmenu'
          sub_nav.dom_class = 'fs-hmenus'
         end
-        primary.item :home3, 'Previdenza', main_home_index_path , :highlights_on => :subpath do |sub_nav|
+        primary.item :home3, 'Modulistica',modulistica_home_index_path , :highlights_on => :subpath do |sub_nav|
           sub_nav.item :s_4, "Previdenza '",'/home/4'
           sub_nav.item :s_3, 'Lavoro','/home/3'
 
@@ -109,7 +104,14 @@ SimpleNavigation::Configuration.run do |navigation|
          sub_nav.dom_class = 'fs-hmenus'
         end
 
+       primary.item :users, 'Books(x test)', books_path do |sub_nav|
+      sub_nav.item :fiction, 'Fiction',  fiction_books_path
+      sub_nav.item :history, 'History', history_books_path
+      sub_nav.item :sports, 'Sports', sports_books_path
+      primary.dom_class = 'fs-hmenu'
+      sub_nav.dom_class = 'fs-hmenus'
 
+        end
 
 
 
