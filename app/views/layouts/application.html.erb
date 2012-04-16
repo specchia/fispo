@@ -1,16 +1,105 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
 <head>
-  <title>Fispo</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+        <!--  Created by spec Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional" -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fispo></title>
+          <%= stylesheet_link_tag    "application", :media => "all" %>
+          <%= javascript_include_tag "application" %>
+          <%= csrf_meta_tags %>
+  <style type="text/css">
+          .fs-post .layout-item-0 { margin-bottom: 10px; }
+          .fs-post .layout-item-1 { border-right-style:solid;border-bottom-style:solid;border-right-width:1px;border-bottom-width:1px;border-right-color:#ABABAB;border-bottom-color:#ABABAB; padding-right: 10px;padding-left: 10px; }
+          .ie7 .fs-post .fs-layout-cell {border:none !important; padding:0 !important; }
+          .ie6 .fs-post .fs-layout-cell {border:none !important; padding:0 !important; }
+  </style>
 </head>
 <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-    <%= yield %>
+<div id="fs-main">
+    <div class="cleared reset-box"></div>
+    <div class="fs-header">
+        <div class="fs-header-position">
+            <div class="fs-header-wrapper">
+                <div class="cleared reset-box"></div>
+                <div class="fs-header-inner">
+                        <div class="fs-logo">
+                            <h1 class="fs-logo-name"><a href="./index.html">FISCOSPORT</a></h1>
+                            <h3 class="fs-logo-text">professionisti esperti in materie fiscali sportive</h3>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="cleared reset-box"></div>
+
+<%# barra dei menu  %> <%= render 'menu_bar' %>
+
+        <div class="cleared reset-box"></div>
+    <div class="fs-box fs-sheet">
+        <div class="fs-box-body fs-sheet-body">
+            <div class="fs-layout-wrapper">
+                <div class="fs-content-layout">
+                    <div class="fs-content-layout-row">
+<%#sidebar n0 su 3 colonne %> <%=	 render 'home/sidebar0' %>
+                        <div class="fs-layout-cell fs-content">
+                            <div class="fs-box fs-post">
+                                <div class="fs-box-body fs-post-body">
+<%# i contenuti        %>          <%= yield %>
+		                            <div class="cleared"></div>
+                                </div>
+                            </div>
+                            <div class="cleared"></div>
+                        </div>
+<%#sidebar n1 su 3 colonne %> <%=	 render 'home/sidebar1' %>
+  <%#sidebar n2 su 3 colonne %> <%=	 render 'home/sidebar2' %>
+                </div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+        <div class="cleared"></div>
+     </div>
+    </div>
+    <div class="fs-footer">
+        <div class="fs-footer-body">
+            <div class="fs-footer-center">
+                <div class="fs-footer-wrapper">
+                    <div class="fs-footer-text">
+                        <p><a href="#">Link</a> | <a href="#">Link</a> | <a href="#">Link</a></p>
+
+<p>Copyright © 2012 All Rights Reserved thual & specchiasoft.</p>
+
+                        <div class="cleared"></div>
+                        <p class="fs-page-footer"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="cleared"></div>
+        </div>
+    </div>
+    <div class="cleared"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
