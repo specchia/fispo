@@ -23,8 +23,13 @@ module SessionsHelper
 #    user == current_user
 
   def signed_in_and_master?
-    signed_in? && (current_user.name == 'dom'  ||  current_user.name == 'specchia')
+    signed_in? && (current_user.username == 'dom'  ||  current_user.username == 'specchia')
     signed_in? && (current_user.is? :admin)
+  end
+
+  def signin_and_collaboratore?
+    signed_in? && (current_user.has_any_role? :admin, :manager, :collaboratore)  
+    #signed_in? && (current_user.is_any_of? :admin, :manager, :collaboratore)
   end
 
   def get_fisco_user

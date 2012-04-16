@@ -65,6 +65,20 @@
         <div class="fs-footer-body">
             <div class="fs-footer-center">
                 <div class="fs-footer-wrapper">
+
+                    <% if signed_in_and_master? %>
+                        <br />
+                        <ul class="navigation round">
+                          <li><%= link_to "Sections", sections_path %></li>
+                        </ul>
+                        <br />
+                    <% end %>
+                    <br />
+                    <ul class="navigation round">
+                      <li><%= link_to "Sections", sections_path %></li>
+                    </ul>
+                    <br />
+
                     <div class="fs-footer-text">
                         <p><a href="#">Link</a> | <a href="#">Link</a> | <a href="#">Link</a></p>
 
