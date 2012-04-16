@@ -1,0 +1,33 @@
+<%# PAGINA DEI CONTENUTI --->>> FRONT END  %>
+
+<%# barra dei menu   %>
+        <%= render 'menu_bar' %>
+        <div class="cleared reset-box"></div>
+
+
+    <div class="fs-box fs-sheet">
+        <div class="fs-box-body fs-sheet-body">
+            <div class="fs-layout-wrapper">
+                <div class="fs-content-layout">
+                    <div class="fs-content-layout-row">
+<%#sidebar n0 su 3 colonne %> <%=	 render 'sidebar0' %>
+                        <div class="fs-layout-cell fs-content">
+                            <div class="fs-box fs-post">
+								<div class="fs-box-body fs-post-body">
+								<p class="notice"> <%= notice %>  </p>
+								<p calss="alert"> <%= alert %> </p>
+								<%# i contenuti        %>          <%= yield %>
+		                            <div class="cleared"></div>
+                                </div>
+                            </div>
+                            <div class="cleared"></div>
+                        </div>
+<%#sidebar n1 su 3 colonne %> <%=	 render 'sidebar1' %>
+  <%#sidebar n2 su 3 colonne %> <%=	 render 'sidebar2' %>
+                </div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+        <div class="cleared"></div>
+     </div>
+    </div>
