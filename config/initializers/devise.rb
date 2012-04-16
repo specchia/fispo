@@ -27,6 +27,7 @@ Devise.setup do |config|
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
    config.authentication_keys = [ :login ]
+  # config.authentication_keys = [ :email ]
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
@@ -86,6 +87,7 @@ Devise.setup do |config|
 
   # Setup a pepper to generate the encrypted password.
   # config.pepper = "fe02b021b8b1000f9fccc8653e3c68447d01ef48db43b916af6d60213f05051665ac78fda92386305272b134fc012699f239ed4666f22cf3dbf4e1ee69356a27"
+  # config.pepper = "66063ea900cae32e1c0c9081b8e5d98d245e54b2b9e37755a93d0a8645dc1ee971ab7620d379b3e45ed44c4d1a2989306a23cbb450eec83c06154c6e3c731d09"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -122,6 +124,7 @@ Devise.setup do |config|
   # ==> Configuration for :validatable
   # Range for password length. Default is 6..128.
   config.password_length = 1..128
+  # config.password_length = 6..128
 
   # Email regex used to validate email formats. It simply asserts that
   # an one (and only one) @ exists in the given string. This is mainly
@@ -160,6 +163,7 @@ Devise.setup do |config|
   #
   # Defines which key will be used when recovering the password for an account
    config.reset_password_keys = [ :login ]
+  # config.reset_password_keys = [ :email ]
 
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to
@@ -206,6 +210,7 @@ Devise.setup do |config|
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :get
+  #config.sign_out_via = :delete
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting

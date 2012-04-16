@@ -1,8 +1,19 @@
 Fispo::Application.routes.draw do
 
+  resources :roles
+
+  get "page/home"
+
+  get "page/index"
+
+  get "page/about"
+
+  get "page/contact"
+
+  #root :to => 'page#home'
   root :to => "home#index"
 
- get "/home/subscription"
+  get "/home/subscription"
 
 
   resources :books do
@@ -44,8 +55,6 @@ resources :top_sections
 
    # devise_for :users
     #devise_for :contents
-
-
 
 
   # The priority is based upon order of creation:
