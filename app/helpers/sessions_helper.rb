@@ -1,35 +1,35 @@
 module SessionsHelper
-
-#TODO: Verificare se cambiare tutti current_user => current_account!
+#Note: devise --> becareful. Do not use current_user but current_account 
+#ActionView::Template::Error (undefined local variable or method `current_user'
 
 #PROTECT PAGE using before_filter :authenticate, :only => [:edit, :update]
 #  def sign_in(user)
 #    user.remember_me!
 #    cookies[:remember_token] = { :value   => user.remember_token, :expires => 20.years.from_now.utc }
-#    self.current_user = user
-#  def current_user=(user)
-#    @current_user = user
-#  def current_user
-#    @current_user ||= user_from_remember_token #||= (“or equals”) assignment operator only if @current_user is undefined
+#    self.current_account = user
+#  def current_account=(user)
+#    @current_account = user
+#  def current_account
+#    @current_account ||= user_from_remember_token #||= (“or equals”) assignment operator only if @current_account is undefined
 #  def user_from_remember_token
 #    remember_token = cookies[:remember_token]
 #    User.find_by_remember_token(remember_token) unless remember_token.nil?
 #  def signed_in?
-#    !current_user.nil?
+#    !current_account.nil?
 #  def sign_out
 #    cookies.delete(:remember_token)
-#    self.current_user = nil
-#  def current_user?(user)
-#    user == current_user
+#    self.current_account = nil
+#  def current_account?(user)
+#    user == current_account
 
   def signed_in_and_master?
-    signed_in? && (current_user.username == 'dom'  ||  current_user.username == 'specchia')
-    signed_in? && (current_user.is? :admin)
+    signed_in? && (current_account.username == 'dom'  ||  current_account.username == 'specchia')
+    signed_in? && (current_account.is? :admin)
   end
 
   def signin_and_collaboratore?
-    signed_in? && (current_user.has_any_role? :admin, :manager, :collaboratore)  
-    #signed_in? && (current_user.is_any_of? :admin, :manager, :collaboratore)
+    signed_in? && (current_account.has_any_role? :admin, :manager, :collaboratore)  
+    #signed_in? && (current_account.is_any_of? :admin, :manager, :collaboratore)
   end
 
   def can_content?(content_id)
@@ -51,7 +51,7 @@ module SessionsHelper
     if signed_in_and_master?
         User.find(1)
     else
-        User.find(:first, :conditions => [ "user_id = ?", current_user.id])
+        User.find(:first, :conditions => [ "user_id = ?", current_account.id])
     end
   end
 
