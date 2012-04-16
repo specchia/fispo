@@ -27,7 +27,12 @@ module SessionsHelper
     signed_in? && (current_account.is? :admin)
   end
 
-  def signin_and_collaboratore?
+  def signed_in_and_manager?
+    #signed_in? && (current_account.has_any_role? :admin, :manager)  
+    signed_in? && (current_account.is_any_of? :admin, :manager)
+  end
+
+  def signed_in_and_collaboratore?
     signed_in? && (current_account.has_any_role? :admin, :manager, :collaboratore)  
     #signed_in? && (current_account.is_any_of? :admin, :manager, :collaboratore)
   end
@@ -44,7 +49,7 @@ module SessionsHelper
 #    if news and news.account_id = current_account.id
 #        return true
 #    end
-    return signin_and_collaboratore?
+    return signed_in_and_collaboratore?
   end
 
   def get_fisco_user

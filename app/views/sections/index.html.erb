@@ -21,7 +21,7 @@
     <td><%= @top_sections[section.top_section_id.to_i - 1].sezione_top %>            </td>
 
     <td><%= link_to image_tag("ico_showb.png", :size=> "16x16" ), section %></td>
-    <td><%= link_to image_tag("ico_edit.png", :size=> "16x16" ) , edit_section_path(section) if signin_and_collaboratore? %></td>
+    <td><%= link_to image_tag("ico_edit.png", :size=> "16x16" ) , edit_section_path(section) if signed_in_and_collaboratore? %></td>
     <td><%= link_to image_tag("ico_delb.png", :size=> "16x16" ) , section, confirm: 'Vuoi cancellare il record?', method: :delete if (current_account && (current_account.is? :admin)) %></td>
 
 
