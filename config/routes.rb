@@ -1,39 +1,27 @@
 Fispo::Application.routes.draw do
 
-  resources :roles
-
-  get "page/home"
-
-  get "page/index"
-
-  get "page/about"
-
-  get "page/contact"
-
   #root :to => 'page#home'
   root :to => "home#index"
 
-  get "/home/subscription"
+  #add automaticalyy by forem install
+  mount Forem::Engine, :at => "/forums"
 
-
-  resources :books do
-    collection do
-      get :fiction
-      get :history
-      get :sports
-    end
-  end
-
- resources :sections
-   #match "s:id" => redirect("/sections/%{id}")
-
-resources :top_sections
-  devise_for :accounts
- # resources :accounts
+  resources :roles
+  resources :sections
+  #match "s:id" => redirect("/sections/%{id}")
+  resources :top_sections
   resources :contents
   resources :users
-   #member
+  #member
 
+  #AUTHENTICATION devise
+  #resources :accounts
+  devise_for :accounts
+  #devise_for :users
+  #devise_for :contents
+
+
+  get "/home/subscription"
   resources :home do
     collection do
       get :show
@@ -42,20 +30,25 @@ resources :top_sections
       get :subscription
       get :vademecum
       get :modulistica
-
-
     end
     member do
        get :show_article
-
     end
-
   end
+  #done by domthu but sandro use Home
+  get "page/home"
+  get "page/index"
+  get "page/about"
+  get "page/contact"
 
-
-   # devise_for :users
-    #devise_for :contents
-
+  #Test
+  resources :books do
+    collection do
+      get :fiction
+      get :history
+      get :sports
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

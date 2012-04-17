@@ -38,6 +38,12 @@ class Account < ActiveRecord::Base
     #                                  u.has_all_roles? :author, :manager  u.is? :author, :manager  => false
 
     #
+    # Forum: gem 'forem'
+    #
+    #Added fields account.forem_admin and account.forem_state during forem install
+    #db/migrate done
+
+    #
     #https://github.com/plataformatec/devise/wiki/How-To:-Allow-users-to-sign-in-using-their-username-or-email-address
     #
     protected

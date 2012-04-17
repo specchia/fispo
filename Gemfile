@@ -46,5 +46,12 @@ gem 'rake' ,'~> 0.9.2'
 #require 'role_model'
 gem 'role_model'
 
+# To paginate
+#gem 'kaminari'
+gem 'will_paginate'
+
+# To use Forem forum integration
+gem 'forem', :git => "git://github.com/radar/forem.git"
+
 
 
