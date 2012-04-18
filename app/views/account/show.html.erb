@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -24,11 +25,22 @@
 
 <%= link_to_if(can?(:update,@user), "cancan Edit", edit_user_path(@user)) %> |
 <%= link_to_if(can?(:delete, @user), "cancan Delete", user_path(@user), :confirm => "Are you sure?", :method => :delete) {} %>
+=======
+
+<%#cancan %>
+
+<h3>Credenziale utente</h3>
+<h2><%= @account.username %></h2>
+ 
+<%= link_to_if(can?(:update, @account), "Edit", edit_account_path(@account)) %> |
+<%= link_to_if(can?(:delete, @account), "Delete", account_path(@account), :confirm => "Are you sure?", :method => :delete) {} %>
+>>>>>>> origin/domthu-roles
  
 <table class="one-column-emphasis">
 	<tbody>
 		<tr>
 			<td class="oce-first">Email:</td>
+<<<<<<< HEAD
 			<td><%= @user.email %></td>
 		</tr>
 		<tr>
@@ -47,6 +59,26 @@
 		<tr>
 			<td class="oce-first">Sign In Count:</td>
 			<td><%= @user.sign_in_count %></td>
+=======
+			<td><%= @account.email %></td>
+		</tr>
+		<tr>
+			<td class="oce-first">Role:</td>
+			<td><%= @account.roles.first.name %></td>
+		</tr>
+	<% if can?(:see_timestamps,Account) %>
+		<tr>
+			<td class="oce-first">Created at:</td>
+			<td><%= @account.created_at %></td>
+		</tr>
+		<tr>
+			<td class="oce-first">Last Sign In:</td>
+			<td><%= @account.last_sign_in_at %></td>
+		</tr>
+		<tr>
+			<td class="oce-first">Sign In Count:</td>
+			<td><%= @account.sign_in_count %></td>
+>>>>>>> origin/domthu-roles
 		</tr>
 	<% end %>
 	</tbody>
