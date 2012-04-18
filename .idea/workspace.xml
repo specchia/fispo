@@ -5,95 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1d8a863-ca6a-4a83-9e31-e47d9db4d84e" name="Default" comment="implementato DEVISE e Scaffold per Utenti e Categorie + test di importazione Utenti esestenti">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/be_m2menuitem.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/be_m2nav.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/footer_b.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/header.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/postheadericon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/sheet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/sheet_b.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/sheet_t.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/backend.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/backend_m1.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/backend_m2.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home_m1.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home_m2.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/contents/_header.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/contents/_main_page.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/contents_navigation.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home_bar2.css.scss" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\javascripts\account.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\javascripts\application.js" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\javascripts\contents.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\javascripts\home.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\javascripts\page.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\javascripts\roles.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\javascripts\sections.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\javascripts\top_sections.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\javascripts\users.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\stylesheets\account.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\stylesheets\contents.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\stylesheets\page.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\stylesheets\roles.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\stylesheets\sections.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\stylesheets\top_sections.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\stylesheets\users.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\models\.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\views\home\_menu_bar.erb" afterPath="" />
-      <change type="DELETED" beforePath="W:\_WebDev_\fispo\public\jquery.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/home/_blocco_esempio.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/home/_blocco_vmenu.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/homev2_navigation.rb" />
+      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\images\fs-logo.png" afterPath="" />
+      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\assets\stylesheets\application.css.erb" afterPath="" />
+      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\views\home\_blocco_archivi.erb" afterPath="" />
+      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\views\home\_blocco_menu_verticale.erb" afterPath="" />
+      <change type="DELETED" beforePath="W:\_WebDev_\fispo\app\views\home\_blocco_sidebar0.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/fispo.iml" afterPath="$PROJECT_DIR$/.idea/fispo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/block.png" afterPath="$PROJECT_DIR$/app/assets/images/block.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/block_b.png" afterPath="$PROJECT_DIR$/app/assets/images/block_b.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/block_t.png" afterPath="$PROJECT_DIR$/app/assets/images/block_t.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/blockcontentbullets.png" afterPath="$PROJECT_DIR$/app/assets/images/blockcontentbullets.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/button.png" afterPath="$PROJECT_DIR$/app/assets/images/button.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/footer.png" afterPath="$PROJECT_DIR$/app/assets/images/footer.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/footerbullets.png" afterPath="$PROJECT_DIR$/app/assets/images/footerbullets.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/menuitem.png" afterPath="$PROJECT_DIR$/app/assets/images/menuitem.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/nav.png" afterPath="$PROJECT_DIR$/app/assets/images/nav.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/postbullets.png" afterPath="$PROJECT_DIR$/app/assets/images/postbullets.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/postquote.png" afterPath="$PROJECT_DIR$/app/assets/images/postquote.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/subitem.png" afterPath="$PROJECT_DIR$/app/assets/images/subitem.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/vmenublock.png" afterPath="$PROJECT_DIR$/app/assets/images/vmenublock.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/vmenublock_b.png" afterPath="$PROJECT_DIR$/app/assets/images/vmenublock_b.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/vmenublock_t.png" afterPath="$PROJECT_DIR$/app/assets/images/vmenublock_t.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/vmenuitem.png" afterPath="$PROJECT_DIR$/app/assets/images/vmenuitem.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/vsubitem.png" afterPath="$PROJECT_DIR$/app/assets/images/vsubitem.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/vsubitemicon.png" afterPath="$PROJECT_DIR$/app/assets/images/vsubitemicon.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/contents_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/contents_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/account.rb" afterPath="$PROJECT_DIR$/app/models/account.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/section.rb" afterPath="$PROJECT_DIR$/app/models/section.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/_footer.erb" afterPath="$PROJECT_DIR$/app/views/application/_footer.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/_menu_bar.erb" afterPath="$PROJECT_DIR$/app/views/application/_menu_bar.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_contenuti.erb" afterPath="$PROJECT_DIR$/app/views/home/_contenuti.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_header.erb" afterPath="$PROJECT_DIR$/app/views/home/_header.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home_m1.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home_m1.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home_m2.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home_m2.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_blocco_account.erb" afterPath="$PROJECT_DIR$/app/views/home/_blocco_account.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_blocco_ricerca.erb" afterPath="$PROJECT_DIR$/app/views/home/_blocco_ricerca.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_blocco_sidebar1.erb" afterPath="$PROJECT_DIR$/app/views/home/_blocco_sidebar1.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_blocco_sidebar2.erb" afterPath="$PROJECT_DIR$/app/views/home/_blocco_sidebar2.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_main_page.erb" afterPath="$PROJECT_DIR$/app/views/home/_main_page.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/main.html.erb" afterPath="$PROJECT_DIR$/app/views/home/main.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sections/index.html.erb" afterPath="$PROJECT_DIR$/app/views/sections/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/backend_navigation.rb" afterPath="$PROJECT_DIR$/config/backend_navigation.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/home_navigation.rb" afterPath="$PROJECT_DIR$/config/home_navigation.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/navigation - Copia.rb" afterPath="$PROJECT_DIR$/config/navigation - Copia.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20120322221639_create_roles.rb" afterPath="$PROJECT_DIR$/db/migrate/20120322221639_create_roles.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/migrate_users.rake" afterPath="$PROJECT_DIR$/lib/tasks/migrate_users.rake" />
-      <change type="MOVED" beforePath="W:\_WebDev_\fispo\app\assets\images\agt_back.png" afterPath="$PROJECT_DIR$/app/assets/images/ico_back.png" />
-      <change type="MOVED" beforePath="W:\_WebDev_\fispo\app\assets\images\agt_forward.png" afterPath="$PROJECT_DIR$/app/assets/images/ico_forward.png" />
-      <change type="MOVED" beforePath="W:\_WebDev_\fispo\app\assets\images\forward.png" afterPath="$PROJECT_DIR$/app/assets/images/ico_forward1.png" />
-      <change type="MOVED" beforePath="W:\_WebDev_\fispo\app\assets\stylesheets\application.css.erb" afterPath="$PROJECT_DIR$/public/fs-home.css" />
-      <change type="MOVED" beforePath="W:\_WebDev_\fispo\app\views\home\_sidebar0.erb" afterPath="$PROJECT_DIR$/app/views/home/_blocco_sidebar0.erb" />
-      <change type="MOVED" beforePath="W:\_WebDev_\fispo\app\views\home\_sidebar1.erb" afterPath="$PROJECT_DIR$/app/views/home/_blocco_sidebar1.erb" />
-      <change type="MOVED" beforePath="W:\_WebDev_\fispo\app\views\home\_sidebar2.erb" afterPath="$PROJECT_DIR$/app/views/home/_blocco_sidebar2.erb" />
     </list>
     <ignored path="fispo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -122,46 +52,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="contents_navigation.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/contents_navigation.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="27" selection-start="4722" selection-end="4722" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="backend_navigation.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/backend_navigation.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="42" selection-start="5095" selection-end="5095" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home_navigation.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/home_navigation.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="33" selection-start="5882" selection-end="5882" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="585" column="9" selection-start="13490" selection-end="13490" vertical-scroll-proportion="-5.16">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_main_page.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_main_page.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/_main_page.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="25" selection-start="363" selection-end="365" vertical-scroll-proportion="0.92391306">
+            <state line="56" column="55" selection-start="2003" selection-end="2003" vertical-scroll-proportion="-15.307693">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.css.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1193" column="39" selection-start="26705" selection-end="26705" vertical-scroll-proportion="-0.21584386">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/main.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="50" selection-start="932" selection-end="932" vertical-scroll-proportion="-11.769231">
               <folding />
             </state>
           </provider>
@@ -186,21 +107,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/home/main.html.erb" />
-        <option value="$PROJECT_DIR$/config/content_navigation.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/home2.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/backend.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/backend_m1.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/application/_menu_bar.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/backend_m2.css.scss" />
-        <option value="$PROJECT_DIR$/config/backend_navigation.rb" />
         <option value="$PROJECT_DIR$/app/views/contents/_main_page.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/home_m1.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/home_m2.css.scss" />
         <option value="$PROJECT_DIR$/config/home_navigation.rb" />
         <option value="$PROJECT_DIR$/config/contents_navigation.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/_blocco_login.erb" />
+        <option value="$PROJECT_DIR$/config/homev2_navigation.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/_blocco_vmenu.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/_blocco_ricerca.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/_blocco_account.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/_blocco_sidebar2.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/_blocco_sidebar1.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/_blocco_quote.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/home_m2.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/home_m1.css.scss" />
         <option value="$PROJECT_DIR$/app/views/home/_main_page.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/main.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
       </list>
     </option>
@@ -257,148 +178,6 @@
       <sortByType RailsProjectView="false" ProjectPane="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fispo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="RailsProjectView">
         <subPane>
           <PATH>
@@ -461,6 +240,94 @@
       </pane>
       <pane id="Favorites">
         <subPane subId="fispo" />
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fispo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fispo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fispo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fispo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fispo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fispo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fispo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fispo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fispo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fispo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fispo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="Scope">
         <subPane subId="Non-Project Files" />
@@ -601,23 +468,23 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="154" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="156" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="744" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="756" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="744" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="154" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="153" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="W:\_WebDev_\fispo\app\assets\stylesheets" />
+      <recent name="W:\_WebDev_\fispo\app\views\home" />
       <recent name="W:\_WebDev_\fispo\config" />
+      <recent name="W:\_WebDev_\fispo\app\assets\stylesheets" />
       <recent name="W:\_WebDev_\fispo\app\views\contents" />
       <recent name="W:\_WebDev_\fispo\app\assets\images" />
-      <recent name="W:\_WebDev_\fispo\public" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: fispo">
@@ -764,6 +631,13 @@
       <RTESTSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -791,13 +665,6 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
@@ -974,16 +841,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="26" y="300" width="1153" height="679" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1296" height="1040" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2887267" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32711306" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.54545456" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54545456" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33479694" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25412843" sideWeight="0.45454547" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25871858" sideWeight="0.6652031" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45005488" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1041,114 +908,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/top_sections_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/devise/menu/_registration_items.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="25" selection-start="236" selection-end="236" vertical-scroll-proportion="0.15384616">
+        <state line="20" column="43" selection-start="633" selection-end="633" vertical-scroll-proportion="0.4047619">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="110" selection-end="110" vertical-scroll-proportion="0.07692308">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/contents_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="18" selection-start="581" selection-end="581" vertical-scroll-proportion="0.4489093">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/devise/menu/_login_items.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/backend_m2.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/home/_blocco_account.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="22" selection-start="2275" selection-end="2275" vertical-scroll-proportion="2.0995204">
+        <state line="8" column="17" selection-start="336" selection-end="336" vertical-scroll-proportion="0.16190477">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/contents/_header.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/_blocco_semplice.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="44" selection-start="367" selection-end="428" vertical-scroll-proportion="-4.576923">
+        <state line="15" column="54" selection-start="699" selection-end="699" vertical-scroll-proportion="0.3083434">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_blocco_sidebar2.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="7" selection-start="138" selection-end="183" vertical-scroll-proportion="0.08095238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_blocco_ricerca.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="756" selection-end="756" vertical-scroll-proportion="0.3764569">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_blocco_sidebar1.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="31" selection-start="123" selection-end="123" vertical-scroll-proportion="0.115384616">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_footer.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="40" selection-start="636" selection-end="636" vertical-scroll-proportion="0.3170163">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_blocco_esempio.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="60" selection-start="970" selection-end="970" vertical-scroll-proportion="0.20118344">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/homev2_navigation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="44" selection-start="4648" selection-end="4648" vertical-scroll-proportion="1.619977">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home_m2.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="23" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
+        <state line="118" column="9" selection-start="2550" selection-end="2550" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home_m1.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="11" selection-start="2553" selection-end="2576" vertical-scroll-proportion="0.35315102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="44" selection-start="564" selection-end="564" vertical-scroll-proportion="0.48076922">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/contents/_main_page.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="45" selection-start="703" selection-end="703" vertical-scroll-proportion="0.3065268">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/contents_navigation.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="27" selection-start="4722" selection-end="4722" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/home_navigation.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="33" selection-start="5882" selection-end="5882" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="585" column="9" selection-start="13490" selection-end="13490" vertical-scroll-proportion="-5.16">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/backend_navigation.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="42" selection-start="5095" selection-end="5095" vertical-scroll-proportion="0.0">
+        <state line="165" column="36" selection-start="3330" selection-end="3330" vertical-scroll-proportion="0.61445785">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_main_page.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="25" selection-start="363" selection-end="365" vertical-scroll-proportion="0.92391306">
+        <state line="56" column="55" selection-start="2003" selection-end="2003" vertical-scroll-proportion="-15.307693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/main.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="50" selection-start="932" selection-end="932" vertical-scroll-proportion="-11.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1193" column="39" selection-start="26705" selection-end="26705" vertical-scroll-proportion="-0.21584386">
           <folding />
         </state>
       </provider>

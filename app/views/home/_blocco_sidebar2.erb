@@ -1,18 +1,8 @@
  <div class="fs-layout-cell fs-sidebar2">
 
+ <%= render :partial => 'blocco_ricerca'  %>
+ <%= render :partial => 'blocco_account'  %>
+ <%= render :partial => 'blocco_semplice'  %>
 
-<%= render 'home/blocco_menu_verticale' %>
- <%= render 'home/blocco_account' %>
-
- <p> current navigation name 1: <br/>
-      <%#active_navigation_item_name(:level => 1) %>
-   <br/>
-   current navigation name 2: <br/>
-      <%#  active_navigation_item_name(:level => 2) %>
-       <hr>
-      <br/>
-    <%# SimpleNavigation.active_item_container_for(1).items.detect{|item| item.selected?}.name %>
-
-
-<div class="cleared"></div>
-</div>
+ <div class="cleared"></div>
+ </div>

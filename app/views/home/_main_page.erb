@@ -5,7 +5,9 @@
             <div class="cleared reset-box"></div>
             <div class="fs-header-inner">
                 <div class="fs-logo">
-                    <div class="fs-logo-name" ></div>
+                    <div class="fs-logo-name" >
+                      <div class="fs-logo-img"></div>
+                    </div>
 
 
                         <h4 class="fs-logo-text">professionisti esperti in materie fiscali sportive</h4>
@@ -37,44 +39,58 @@
     <div class="cleared reset-box"></div>
 
 </div>
-
+<div class="cleared reset-box"></div>
 <%# --->>> I CONTENUTI --->>> FRONT END  %>
-    <div class="fs-box fs-sheet">
-        <div class="fs-box-body fs-sheet-body">
-            <div class="fs-layout-wrapper">
-                <div class="fs-content-layout">
-                    <div class="fs-content-layout-row">
+<div class="fs-box fs-sheet">
+    <div class="fs-box-body fs-sheet-body">
+        <div class="fs-layout-wrapper">
+            <div class="fs-content-layout">
+                <div class="fs-content-layout-row">
+                    <div class="fs-layout-cell fs-content">
+                        <div class="fs-box fs-post">
+                            <div class="fs-box-body fs-post-body">
+                                <div class="fs-post-inner fs-article">
 
-                        <%#sidebar n0 su 3 colonne a sinistra %>
-                        <%#	 render 'blocco_sidebar0' %>
+                                        <%#h2 class="fs-postheader"><span class="fs-postheadericon">Page 1
+                                        </span></h2> %>
 
-                        <div class="fs-layout-cell fs-content">
-                            <div class="fs-box fs-post">
-								<div class="fs-box-body fs-post-body">
+                                    <div class="fs-postcontent">
+                                        <div class="fs-content-layout">
+                                            <div class="fs-content-layout-row">
+                                                <div class="fs-layout-cell layout-item-0" style="width: 100%;">
 
+                                                  <%#>Enter Page content here...%>
+                                                    <%=	yield %>
 
-                                    <p class="notice"> <%= notice %>  </p>
-                                    <p class="alert"> <%= alert %> </p>
-
-
-
-                                    <%# i contenuti   %>
-                                    <%= yield %>
-
-		                            <div class="cleared"></div>
-                                </div>
-                            </div>
-                            <div class="cleared"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fs-content-layout">
+                                        <div class="fs-content-layout-row">
+                                    </div>
                         </div>
-
-                        <%#sidebar n1 su 3 colonne a centro destra %>
-                        <%# render 'blocco_sidebar1' %>
-
-                        <%#sidebar n2 su 3 colonne a destra %>
-                        <%#	render 'blocco_sidebar2' %>
+                                    </div>
+                                    <div class="cleared"></div>
+                                </div>
+		                        <div class="cleared"></div>
+                            </div>
+                        </div>
+                        <div class="cleared"></div>
                     </div>
+                        <%#sidebar a centro destra %>
+                        <%= render 'blocco_sidebar1' %>
+
+                        <%#sidebar a destra %>
+                        <%=	render 'blocco_sidebar2' %>
                 </div>
             </div>
-            <div class="cleared"></div>
         </div>
+        <div class="cleared"></div>
+
+        <%# render :partial => 'footer' %>
+        <%= render :partial => 'footer' %>
+
+        <div class="cleared"></div>
     </div>
+</div>
+<div class="cleared"></div>
