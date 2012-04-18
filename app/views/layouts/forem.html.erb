@@ -5,6 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Fispo</title>
           <%= stylesheet_link_tag    "application", :media => "all" %>
+          <%= stylesheet_link_tag    "forem/orange/style" %>
           <%# javascript_include_tag "application" %>
           <%= csrf_meta_tags %>
   <style type="text/css">
@@ -18,8 +19,8 @@
 
 <div id="fs-main">
     <div class="login">
-        <%# devise links  only in forem views render :partial => 'devise/links' %>
-        <%# Autenticazione + forum  %> <%= render :partial => 'devise/menu/login_items.html' %>
+        <%# devise links  only in forem views  Kappao render :partial => 'devise/links' %>
+        <%# Autenticazione + forum render :partial => 'devise/menu/login_items.html' %>
     </div>
     <div class="cleared reset-box"></div>
     <div class="fs-header">
@@ -37,15 +38,12 @@
     </div>
         <div class="cleared reset-box"></div>
 
-<%# barra dei menu  %> <%= render :partial => 'home/menu_bar.2bar' %>
-
         <div class="cleared reset-box"></div>
     <div class="fs-box fs-sheet">
         <div class="fs-box-body fs-sheet-body">
             <div class="fs-layout-wrapper">
                 <div class="fs-content-layout">
                     <div class="fs-content-layout-row">
-<%#sidebar n0 su 3 colonne %> <%=	 render 'home/sidebar0' %>
                         <div class="fs-layout-cell fs-content">
                             <div class="fs-box fs-post">
                                 <div class="fs-box-body fs-post-body">
@@ -57,8 +55,6 @@
                             </div>
                             <div class="cleared"></div>
                         </div>
-<%#sidebar n1 su 3 colonne %> <%=	 render 'home/sidebar1' %>
-<%#sidebar n2 su 3 colonne %> <%=	 render 'home/sidebar2' %>
                 </div>
             </div>
         </div>
@@ -69,32 +65,9 @@
         <div class="fs-footer-body">
             <div class="fs-footer-center">
                 <div class="fs-footer-wrapper">
-
-                    <% if signed_in_and_master? %>
-                        <br />
-                        <ul class="navigation round">
-                          <li><%= link_to "Utenti", users_path %></li>
-                          <li><%= link_to "Notizie", contents_path %></li>
-                          <li><%= link_to "Sezioni", top_sections_path %></li>
-                          <li><%= link_to "Sotto sezioni", sections_path %></li>
-                          <% if forem_user.forem_admin %>
-                            <li><%= link_to "Amministra forum", forem.admin_root_url %></li>
-                          <% end %>
-                        </ul>
-                        <br />
-                    <% end %>
-                    <br />
-                    <ul class="navigation round">
-                      <li><%= link_to "Utenti", users_path %></li>
-                      <li><%= link_to "Notizie", contents_path %></li>
-                      <li><%= link_to "Sezioni", top_sections_path %></li>
-                      <li><%= link_to "Sotto sezioni", sections_path %></li>
-                      <li><%= link_to "Amministra il forum", forem.admin_root_url %></li>
-                    </ul>
-                    <br />
-
                     <div class="fs-footer-text">
-                        <p><a href="#"><%= print_current_user %></a> | <a href="#">Link</a> | <a href="#">Link</a></p>
+
+                        <p><%= link_to "Discussion", forem.root_path %>| <%= link_to "Ritorna al sito", main_app.root_path %></p>
 
 <p>Copyright © 2012 All Rights Reserved thual & specchiasoft.</p>  
                         <div class="cleared"></div>

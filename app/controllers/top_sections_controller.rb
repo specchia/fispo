@@ -1,4 +1,8 @@
 class TopSectionsController < ApplicationController
+
+  #devise
+  before_filter :authenticate_account!
+
   # GET /top_sections
   # GET /top_sections.json
   def index

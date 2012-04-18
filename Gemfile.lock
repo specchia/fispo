@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/radar/forem-theme-orange.git
+  revision: 8e78cb15c986d8d7b4322fb92f5fc87d5ca670ad
+  specs:
+    forem-theme-orange (0.0.1)
+
+GIT
   remote: git://github.com/radar/forem.git
   revision: 3c3e61c7af7282c3c5f4b1d100a81d55fe2f108b
   specs:
@@ -152,6 +158,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   forem!
+  forem-theme-orange!
   jbuilder
   jquery-rails
   mysql2

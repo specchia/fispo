@@ -27,7 +27,11 @@ gem 'jquery-rails'
 
 # To use Jbuilder templates for JSON
 gem 'jbuilder'
+
 gem 'devise'
+#domthu 20120418
+#gem 'cancan'
+
 gem 'rake' ,'~> 0.9.2'
 
 # Use unicorn as the web server
@@ -52,6 +56,27 @@ gem 'will_paginate'
 
 # To use Forem forum integration
 gem 'forem', :git => "git://github.com/radar/forem.git"
+# To use Forem Theme
+#gem 'forem-theme-base', :git => "git://github.com/radar/forem-theme-base.git"
+#gem 'forem-theme-twist', :git => "git://github.com/radar/forem-theme-twist.git"
+gem 'forem-theme-orange', :git => "git://github.com/radar/forem-theme-orange.git"
+# create rail engine in ../lib/engineForem.rb
+# use theme in application.css *= require "forem/{theme}/style"
+# or in template forem.html.erb <%= stylesheet_link_tag "forem/{theme}/style" %>
+# First install the gem in the application require Asset Pipeline = True
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

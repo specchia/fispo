@@ -1,29 +1,32 @@
+<%# main_app %>
 <% if account_signed_in? %>
-   <br />ma ... non sei tu?
-      <span class="fs-button-wrapper">
-      <span class="fs-button-l"> </span>
-      <span class="fs-button-r"> </span>
+  <ul class="navigation round">
+    <%#             forem_user.email  ok , main_app.edit_user_registration_path %>
+    <li><%= link_to current_account.email, main_app.edit_account_registration_path %></li>
+    <%#                     main_app.destroy_user_session_path kappao %>
+    <%#                              destroy_user_session_path ok %>
+    <li><%= link_to "Ecsi", main_app.destroy_account_session_path, :method => :delete %></li>
+    <li><%# link_to "Sign out", main_app.sign_out_path Kappao non esiste %></li>
+    <% if forem_user.forem_admin %>
+        <li><%= link_to "Amministra il forum", forem.admin_root_url %></li>
+    <% end %>
+    <%#                                    account_registration_path ok %>
+    <li><%= link_to 'cancellami', main_app.account_registration_path, :confirm => 'Sei sicuro di cancellare questo account?', :method => :delete %></li>
+  </ul>
 
-      <a class="fs-button" <%= link_to 'esci', destroy_account_session_path, :method => 'delete' %> > </a>
-   </span>
-   <br />
-     non mi interessa
-      <span class="fs-button-wrapper">
-      <span class="fs-button-l"> </span>
-      <span class="fs-button-r"> </span>
+<% else %>
 
-      <a class="fs-button" <%= link_to 'cancellami', account_registration_path, :confirm => 'Sei sicuro di cancellare questo account?', :method => :delete %> >. </a>
-   </span>
+  <span class="fs-button-wrapper">
+    <span class="fs-button-l"> </span>
+    <span class="fs-button-r"> </span>
+    <a class="fs-button" <%= link_to 'accedi', new_account_session_path %> > </a>
 
+    <br />
+    <%= link_to "Sign up", main_app.new_account_registration_path %>
+        | <%= link_to "Sign in", main_app.new_account_session_path %>
+  </span>
 
- <% else %>
+<% end %>
 
-      <span class="fs-button-wrapper">
-      <span class="fs-button-l"> </span>
-      <span class="fs-button-r"> </span>
-      <a class="fs-button" <%= link_to 'accedi', new_account_session_path %> > </a>
-   </span>
-
- <% end %>
-
+<%# devise after_sign_in_path_for after_sign_out_path_for %>
 <%# questa guida: http://ridingrails.net/devise-authentication-recover-password-email-code-kata/ %>

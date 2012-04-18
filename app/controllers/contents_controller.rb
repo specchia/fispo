@@ -1,4 +1,5 @@
 class ContentsController < ApplicationController
+
   #devise
   before_filter :authenticate_account!, :except => [:show, :index]
 

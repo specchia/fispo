@@ -22,6 +22,12 @@ module SessionsHelper
 #  def current_account?(user)
 #    user == current_account
 
+  #Forem use cancan path and this application Not!
+  #def sign_in_path
+  #  #map the application for the forem application
+  #  return signin_path
+  #end 
+
   def signed_in_and_master?
     signed_in? && (current_account.username == 'dom'  ||  current_account.username == 'specchia')
     signed_in? && (current_account.is? :admin)
@@ -56,17 +62,24 @@ module SessionsHelper
     if signed_in_and_master?
         User.find(1)
     else
-        User.find(:first, :conditions => [ "user_id = ?", current_account.id])
+        User.find(:first, :conditions => [ "account_id = ?", current_account.id])
+    end
+  end
+
+  def print_current_user
+    if signed_in?
+        #puts current_user.inspect    
+        puts current_account.inspect    
     end
   end
 
   def deny_access_destroy
-    flash[:notice] = "Sorry. Only technical manager can delete data. Please, contact Roberto SPURIO to do it."
+    flash[:notice] = "Spiacenti. Solamente un manager pu&ograve; eliminare dati. Per favore, contatta MariaCristina per farlo."
     redirect_to request.request_uri
   end
   def deny_access
     store_location  #Friendly forwarding
-    flash[:notice] = "Please sign in to access this page."
+    flash[:notice] = "Autenticarsi per accedere alla pagina."
     redirect_to signin_path
   end
   #Friendly forwarding
