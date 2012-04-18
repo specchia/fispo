@@ -1,0 +1,45 @@
+<h1>Lista account utenti</h1>
+
+<table class ='xtable'>
+  <tr>
+    <th>Indirizzo mail</th>
+    <th>Indirizzo mail</th>
+    <th>Ruoli</th>
+    <th>Ruoli</th>
+    <th>Nome utente</th>
+    <th>Nome utente</th>
+  </tr>
+
+  <% @accounts.each do |u| %>
+    <tr>
+      <td><%= u.email %></td>
+      <td><%= "#{u.email}" %></td>
+
+      <td>
+          <% for role in u.roles %>
+            <div class="roles">
+              <%= role.name %>
+            </div>
+          <% end %>
+      </td>
+      <td><%= "#{u.roles.collect{|r| r.name}}" %></td>
+
+      <td><%= u.username %></td>
+      <td><%= link_to_if(can?(:read, Account), "#{u.username}", account_path(u.id)) {} %></td>
+      <td><%= link_to 'Show', u %></td>
+
+      <td><%= link_to 'Edit', edit_account_path(u) if signed_in_and_collaboratore?  %></td>
+      <td><%= link_to_if(can?(:edit, Account), image_tag("ico_edit.png", :size=> "16x16"), edit_account_path(u.id)) {} %></td>
+
+      <td><%= link_to 'Destroy', u, :confirm => 'Are you sure?', :method => :delete if (current_account && (current_account.is? :admin))  %></td>
+      <td><%= link_to_if(can?(:delete, u), image_tag("ico_delb.png", :size=> "16x16"), u, :confirm => "Are you sure?", :method => :delete) {} %></td>
+
+<%#cancan link_to_if(can?(:method, object), innerHTML, path, options) . It’s nice to only display links to those who can actually use them.%>
+    </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuovo account utente', new_account_path %>
+

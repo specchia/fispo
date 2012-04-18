@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120417093558) do
+ActiveRecord::Schema.define(:version => 20120418110137) do
 
   create_table "accounts", :force => true do |t|
     t.string   "email",                  :default => "",               :null => false
@@ -149,15 +149,15 @@ ActiveRecord::Schema.define(:version => 20120417093558) do
   add_index "forem_views", ["viewable_id"], :name => "index_forem_views_on_topic_id"
 
   create_table "roles", :force => true do |t|
-    t.string   "nome"
-    t.text     "descrizione"
+    t.string   "name"
+    t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "roles_users", :id => false, :force => true do |t|
+  create_table "roles_accounts", :id => false, :force => true do |t|
     t.integer "role_id"
-    t.integer "user_id"
+    t.integer "account_id"
   end
 
   create_table "sections", :force => true do |t|

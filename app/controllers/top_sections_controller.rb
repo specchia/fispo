@@ -2,6 +2,9 @@ class TopSectionsController < ApplicationController
 
   #devise
   before_filter :authenticate_account!
+  #cancan
+  load_and_authorize_resource
+
 
   # GET /top_sections
   # GET /top_sections.json

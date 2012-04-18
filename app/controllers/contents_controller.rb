@@ -2,9 +2,11 @@ class ContentsController < ApplicationController
 
   #devise
   before_filter :authenticate_account!, :except => [:show, :index]
-
   #only Requiring the right user to change own contents
   before_filter :correct_user, :only => [:edit, :update, :delete, :destroy]
+  #cancan
+  load_and_authorize_resource
+
 
   # GET /contents
   # GET /contents.json

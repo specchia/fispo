@@ -15,10 +15,13 @@ Fispo::Application.routes.draw do
   #member
 
   #AUTHENTICATION devise
-  #resources :accounts
-  devise_for :accounts
   #devise_for :users
   #devise_for :contents
+  devise_for :accounts
+  #Use custom cancan chek permissions if we want to keeping registration private
+  #devise_for :accounts,  :controllers => { :registrations => "accounts/registrations" }
+  # we want to do CRUD operation on accounts so we define routes
+  resources :accounts
 
 
   get "/home/subscription"

@@ -13,7 +13,7 @@ class Account < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable , :authentication_keys => [ :login ]
 
     # Setup accessible (or protected) attributes for your model
-    attr_accessible :email, :password, :password_confirmation, :remember_me, :username , :login
+    attr_accessible :email, :password, :password_confirmation, :remember_me, :username , :login, :role_ids
     # Include default devise modules. Others available are:
     # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
     attr_accessor :login
@@ -24,6 +24,15 @@ class Account < ActiveRecord::Base
         where(conditions).where(["lower(username) = :value OR lower(email) = :value", { :value => login.strip.downcase }]).first
     end
 
+
+    #
+    #Roles with cancan http://starqle.com/articles/rails-3-authentication-and-authorization-with-devise-and-cancan-part-2/
+    # add attr_accessible :role_ids
+    #
+    has_and_belongs_to_many :roles
+    def role?(role)
+        return !!self.roles.find_by_name(role.to_s.camelize)
+    end
 
     #
     # ROLES https://github.com/martinrehfeld/role_model

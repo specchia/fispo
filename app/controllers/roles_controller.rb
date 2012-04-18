@@ -1,4 +1,10 @@
 class RolesController < ApplicationController
+
+  #devise
+  before_filter :authenticate_account!
+  #cancan
+  load_and_authorize_resource
+
   # GET /roles
   # GET /roles.json
   def index
@@ -72,6 +78,8 @@ class RolesController < ApplicationController
   # DELETE /roles/1
   # DELETE /roles/1.json
   def destroy
+    reroute() unless current_account.is? :admin
+    
     @role = Role.find(params[:id])
     @role.destroy
 
@@ -80,4 +88,13 @@ class RolesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  private
+
+    def reroute()
+      flash[:notice] = "Solamente un amministratore pu&ograve; eliminare. (pi&ugrave; lo staff di FiscoSport)"
+      redirect_to(roles_path)
+    end
+
 end

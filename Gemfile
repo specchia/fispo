@@ -7,6 +7,11 @@ gem 'rails', '3.2.1'
 
 gem 'mysql2'
 
+gem "nifty-generators", :group => :development
+#nifty:layout: generates generic layout, stylesheet, and helper files.
+#nifty:scaffold: generates a controller and optional model/migration.
+#nifty:config: generates a config YAML file and loader.
+#nifty:authentication: generates user model with sign up and log in.
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -30,7 +35,7 @@ gem 'jbuilder'
 
 gem 'devise'
 #domthu 20120418
-#gem 'cancan'
+gem 'cancan'
 
 gem 'rake' ,'~> 0.9.2'
 

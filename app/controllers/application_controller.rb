@@ -9,6 +9,11 @@ class ApplicationController < ActionController::Base
   #min = cookies[:timezone].to_i
   #Time.zone = ActiveSupport::TimeZone[-min.minutes]
 
+  #cancan access exception
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = exception.message
+    redirect_to root_url
+  end
 
   #Add during forem installazione. To matche the <user model> --> Account
   def forem_user

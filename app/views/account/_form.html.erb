@@ -1,0 +1,52 @@
+<%= form_for(@account) do |f| %>
+  <% if @account.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@account.errors.count, "error") %> Impedisce questo account utente di essere salvato:</h2>
+
+      <ul>
+        <% @account.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label "indirizzo mail", :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label "Nome utente", :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <% if @current_method == "new" %>
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password %>
+    </div>
+    <div class="field">
+      <%= f.label "conferma password", :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %>
+    </div>
+  <% end %>
+
+  <% for role in Role.find(:all) %>
+    <div>
+      <%= check_box_tag "account[role_ids][]", role.id, @account.roles.include?(role) %>
+      <%= role.name %>
+    </div>
+  <% end %>
+
+<%#cancan quite similar to the Devise generated views except we are not using a general “resource” object, we specify @account.%>
+
+  <% if can? :read, Role %>
+    <p><%= f.label "role after cancan abilitazione", :role %></p>
+    <ul class="no-pad no-bullets">
+	    <%= habtm_checkboxes(@account, :role_ids, @accessible_roles, :name) %>
+    </ul>
+  <% end %>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

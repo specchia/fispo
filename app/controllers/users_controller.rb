@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
   
+  #devise
   before_filter :authenticate_account!
-  
+  #cancan
+  load_and_authorize_resource
+
   # GET /users
   # GET /users.json
   def index
