@@ -1,0 +1,253 @@
+// Place all the styles related to the Account controller here.
+// They will automatically be included in application.css.scss.erb.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+/* begin Menu */
+/* menu structure */
+
+ul.be-m1hmenu {
+  a {
+    outline: none;
+    position: relative;
+    z-index: 11;
+    &:link, &:visited, &:hover {
+      outline: none;
+      position: relative;
+      z-index: 11; } }
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style-type: none;
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style-type: none; }
+  li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 5;
+    background: none;
+    &:hover {
+      z-index: 10000;
+      white-space: normal; }
+    li {
+      float: none;
+      width: auto; }
+    &:hover>ul {
+      visibility: visible;
+      top: 100%; }
+    li:hover>ul {
+      top: 0;
+      left: 100%; } }
+  &:after {
+    content: ".";
+    height: 0;
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    clear: both; }
+  ul {
+    &:after {
+      content: ".";
+      height: 0;
+      display: block;
+      visibility: hidden;
+      overflow: hidden;
+      clear: both; }
+    min-height: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    background-image: url('be_spacer.gif');
+    padding: 10px 30px 30px 30px;
+    margin: -10px 0 0 -30px;
+    &.be-m1hmenu-left-to-right {
+      right: auto;
+      left: 0;
+      margin: -10px 0 0 -30px; }
+    &.be-m1hmenu-right-to-left {
+      left: auto;
+      right: 0;
+      margin: -10px -30px 0 0; }
+    ul {
+      padding: 30px 30px 30px 10px;
+      margin: -30px 0 0 -10px;
+      margin-left: -11px;
+      z-index: -1;
+      &.be-m1hmenu-left-to-right {
+        right: auto;
+        left: 0;
+        padding: 30px 30px 30px 10px;
+        margin: -30px 0 0 -10px;
+        margin-left: -11px; }
+      &.be-m1hmenu-right-to-left {
+        left: auto;
+        right: 0;
+        padding: 30px 10px 30px 30px;
+        margin: -30px -10px 0 0;
+        margin-right: -11px; } } }
+  min-height: 0;
+  li li:hover>ul {
+    &.be-m1hmenu-left-to-right {
+      right: auto;
+      left: 100%; }
+    &.be-m1hmenu-right-to-left {
+      left: auto;
+      right: 100%; } }
+  position: relative;
+  padding: 0 10px 0 10px;
+  float: left; }
+
+/* end menu structure */
+
+/* menu bar */
+
+.be-m1nav {
+  margin: 0 auto;
+  min-height: 43px;
+  z-index: 100;
+  margin-top: 0;
+  margin-bottom: 0;
+  &:before, &:after {
+    background-image: url('be_m1nav.png'); }
+  &:before {
+    right: 10px; }
+  &:after {
+    width: 10px; } }
+
+/* end menu bar */
+
+.be-m1nav-outer {
+  position: absolute;
+  width: 100%; }
+
+/* end Menu */
+
+/* begin MenuItem */
+
+ul.be-m1hmenu > li > a {
+  position: relative;
+  display: block;
+  height: 43px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #B0B4B5;
+  padding: 0 50px;
+  line-height: 43px;
+  text-align: center;
+  &:before, &:after {
+    position: absolute;
+    display: block;
+    content: ' ';
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url('be_m1menuitem.png'); }
+  &:before {
+    left: 0;
+    right: 0;
+    background-position: top left; }
+  &:after {
+    width: 0;
+    right: 0;
+    background-position: top right; } }
+
+.be-m1hmenu a {
+  text-align: left;
+  text-decoration: none;
+  &:link, &:visited, &:hover {
+    text-align: left;
+    text-decoration: none; } }
+
+ul {
+  &.be-m1hmenu>li>a.active {
+    &:before {
+      background-position: bottom left; }
+    &:after {
+      background-position: bottom right; }
+    color: #FFFFFF; }
+  &.be-m1hmenu > li {
+    > a:hover:before, &:hover > a:before {
+      background-position: center left; }
+    > a:hover:after, &:hover > a:after {
+      background-position: center right; } }
+  &.be-m1hmenu>li>a:hover, &.be-m1hmenu>li:hover>a {
+    color: #D5D7D7; }
+  &.be-m1hmenu > li:before {
+    position: absolute;
+    display: block;
+    content: ' ';
+    top: 0;
+    left: -1px;
+    width: 1px;
+    height: 43px;
+    background: url('be_menuseparator.png') center center no-repeat; }
+  &.be-m1hmenu>li {
+    margin-left: 1px;
+    &:first-child {
+      margin-left: 0;
+      &:before {
+        display: none; } } } }
+
+/* end MenuItem */
+
+/* begin MenuSeparator */
+
+/* end MenuSeparator */
+
+/* begin MenuSubItem */
+
+.be-m1hmenu ul {
+  a {
+    display: block;
+    white-space: nowrap;
+    height: 27px;
+    background-image: url('be_m1subitem.png');
+    background-position: left top;
+    background-repeat: repeat-x;
+    border-width: 1px;
+    border-style: solid;
+    border-top-width: 0;
+    border-color: #A0A5A6;
+    min-width: 7em;
+    text-align: left;
+    text-decoration: none;
+    line-height: 27px;
+    color: #2F3132;
+    margin: 0;
+    padding: 0 22px; }
+  > li:first-child > a {
+    border-top-width: 1px; }
+  a {
+    &:link, &:visited, &:hover, &:active {
+      text-align: left;
+      text-decoration: none;
+      line-height: 27px;
+      color: #2F3132;
+      margin: 0;
+      padding: 0 22px; } }
+  li {
+    a {
+      &:hover {
+        color: #122119;
+        background-position: left bottom;
+        border-color: #5D965A;
+        border-top-width: 1px !important; }
+      &.be-m1hmenu-before-hovered {
+        border-bottom-width: 0 !important; } }
+    &:hover > a {
+      color: #122119;
+      background-position: left bottom;
+      border-color: #5D965A;
+      border-top-width: 1px !important; } } }
+
+/* end MenuSubItem */

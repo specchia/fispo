@@ -11,9 +11,9 @@ Fispo::Application.routes.draw do
   get "page/contact"
 
   #root :to => 'page#home'
-  root :to => "home#index"
+  root :to => "home#main"
 
-  get "/home/subscription"
+ get "/home/subscription"
 
 
   resources :books do
@@ -24,16 +24,12 @@ Fispo::Application.routes.draw do
     end
   end
 
- resources :sections
-   #match "s:id" => redirect("/sections/%{id}")
-
-resources :top_sections
-  devise_for :accounts
- # resources :accounts
+   devise_for :accounts
+  resources :top_sections
   resources :contents
+  resources :sections
   resources :users
    #member
-
   resources :home do
     collection do
       get :show
@@ -42,10 +38,9 @@ resources :top_sections
       get :subscription
       get :vademecum
       get :modulistica
-
-
     end
     member do
+
        get :show_article
 
     end

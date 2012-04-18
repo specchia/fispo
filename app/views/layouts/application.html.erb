@@ -3,9 +3,9 @@
 <head>
         <!--  Created by spec Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional" -->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Fispo></title>
-          <%= stylesheet_link_tag    "application", :media => "all" %>
-          <%= javascript_include_tag "application" %>
+<title>Fispo </title>
+          <%= stylesheet_link_tag "application", :media => "all" %>
+          <%# javascript_include_tag "application" %>
           <%= csrf_meta_tags %>
   <style type="text/css">
           .fs-post .layout-item-0 { margin-bottom: 10px; }
@@ -20,16 +20,17 @@
 
         <div class="cleared reset-box"></div>
 
-        <%# header intestazione %>
-        <%= render 'header' %>
 
-        <div class="cleared reset-box"></div>
+        <%# header intestazione e menu %>
+        <%#render 'header' %>
+
+
 
         <%# pagina_dei_contenuti  %>
-        <%= render 'main_page' %>
-
+        <%=render 'main_page' %>
+       <div class="cleared reset-box"></div>
         <div class="cleared"></div>
 </div>
-
 </body>
 </html>
+

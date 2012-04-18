@@ -12,12 +12,14 @@ class HomeController < ApplicationController
     @top_sections = TopSection.all
     @contentz =   Content.find(:all, :conditions => ["section_id=?", params[:id]], :include => [:section,:top_section])
   end
-    def main
+
+  def main
     @contents = Content.all
     @accounts = Account.all
     @sections = Section.all
 
-    end
+  end
+
   def show_article
       if account_signed_in?
 

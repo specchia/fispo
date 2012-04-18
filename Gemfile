@@ -39,3 +39,12 @@ gem 'rake' ,'~> 0.9.2'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
  gem "simple-navigation"
+
+#domthu 20120416
+# To use RoleModel
+#require 'rubygems'
+#require 'role_model'
+gem 'role_model'
+
+
+

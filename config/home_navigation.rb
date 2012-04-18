@@ -39,10 +39,10 @@ SimpleNavigation::Configuration.run do |navigation|
     # options - can be used to specify attributes that will be included in the rendered navigation item (e.g. id, class etc.)
     #           some special options that can be set:
     #           :if - Specifies a proc to call to determine if the item should
-    #                 be rendered (e.g. <tt>:if => Proc.new { current_user.admin? }</tt>). The
+    #                 be rendered (e.g. <tt>:if => Proc.new { current_account.admin? }</tt>). The
     #                 proc should evaluate to a true or false value and is evaluated in the context of the view.
     #           :unless - Specifies a proc to call to determine if the item should not
-    #                     be rendered (e.g. <tt>:unless => Proc.new { current_user.admin? }</tt>). The
+    #                     be rendered (e.g. <tt>:unless => Proc.new { current_account.admin? }</tt>). The
     #                     proc should evaluate to a true or false value and is evaluated in the context of the view.
     #           :method - Specifies the http-method for the generated link - default is :get.
     #          :highlights_on - if autohighlighting is turned off and/or you want to explicitly specify
@@ -50,7 +50,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>. 
 
     # Add an item which has a sub navigation (same params, but with block)
-   # primary.item :key_2, 'name2', url, options do |sub_nav|
+    # primary.item :key_2, 'name2', url, options do |sub_nav|
 
 
       #  primary.item :home, 'Sommario', main_home_index ,:highlights_on => :subpath do |sub_nav|
@@ -64,8 +64,10 @@ SimpleNavigation::Configuration.run do |navigation|
     # You can also specify a condition-proc that needs to be fullfilled to display an item.
     # Conditions are part of the options. They are evaluated in the context of the views,
     # thus you can use all the methods and vars you have available in the views.
+
     #primary.item :key_3, 'Admin', url, :class => 'special', :if => Proc.new { current_user.admin? }
     #primary.item :key_4, 'Account', url, :unless => Proc.new { logged_in? }
+
 
     # you can also specify a css id or class to attach to this particular level
     # works for all levels of the menu
@@ -75,45 +77,43 @@ SimpleNavigation::Configuration.run do |navigation|
     # primary.auto_highlight = false
 
 
-        primary.item :home, 'Sommario', main_home_index_path , :highlights_on => :subpath do |sub_nav|
+      primary.item :home, 'Sommario', main_home_index_path , :highlights_on => :subpath do |sub_nav|
           sub_nav.item :s_1, 'Indice','/home/1'
           sub_nav.item :s_2, 'Approfondimenti','/home/2'
           sub_nav.item :s_5, 'Eventi','/home/5'
           sub_nav.item :s_6, 'Quesiti','/home/6'
           sub_nav.item :v_0, 'Abbonamenti',subscription_home_index_path
-          sub_nav.item :special, '' , main_home_index_path , :highlights_on => /home\/(\d)+\/show_article/
+        #  sub_nav.item :special, '' , main_home_index_path , :highlights_on => /home\/(\d)+\/show_article/
          # sub_nav.item :special, 'Ritorna' , main_home_index_path,    :highlights_on => /home\/[0-9]+\/show_article/
          #  sub_nav.item :v_1, 'Ritorna' , main_home_index_path, /home\/[0-9]+\/show_article/)
-          primary.dom_class = 'fs-hmenu'
-          sub_nav.dom_class = 'fs-hmenus'
-        end
+          primary.dom_class = 'fs-m1hmenu'
+          sub_nav.dom_class = 'fs-m2hmenu'
+      end
 
-        primary.item :home2, 'Vademecum', vademecum_home_index_path , :highlights_on => :subpath do |sub_nav|
+       primary.item :home2, 'Vademecum', vademecum_home_index_path , :highlights_on => :subpath do |sub_nav|
           sub_nav.item :s_16, "Vademecum 'Sinibaldi'",'/home/16'
-          sub_nav.item :s_17, 'Guide','/home/17'
-          sub_nav.item :s_18, 'Test','/home/18'
+          sub_nav.item :s_17, 'Guide','/home/16'
 
-          primary.dom_class = 'fs-hmenu'
-         sub_nav.dom_class = 'fs-hmenus'
-        end
+
+          primary.dom_class = 'fs-m1hmenu'
+         sub_nav.dom_class = 'fs-m2hmenu'
+       end
+
         primary.item :home3, 'Modulistica',modulistica_home_index_path , :highlights_on => :subpath do |sub_nav|
           sub_nav.item :s_4, "Previdenza '",'/home/4'
           sub_nav.item :s_3, 'Lavoro','/home/3'
 
-          primary.dom_class = 'fs-hmenu'
-         sub_nav.dom_class = 'fs-hmenus'
+          primary.dom_class = 'fs-m1hmenu'
+         sub_nav.dom_class = 'fs-m2hmenu'
         end
 
-       primary.item :users, 'Books(x test)', books_path do |sub_nav|
-      sub_nav.item :fiction, 'Fiction',  fiction_books_path
-      sub_nav.item :history, 'History', history_books_path
-      sub_nav.item :sports, 'Sports', sports_books_path
-      primary.dom_class = 'fs-hmenu'
-      sub_nav.dom_class = 'fs-hmenus'
 
-        end
+
+          primary.item :users, 'BACK END ---> (x test)', books_path
+          primary.dom_class = 'fs-m1hmenu'
 
 
 
   end
 end
+

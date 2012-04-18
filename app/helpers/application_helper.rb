@@ -1,14 +1,18 @@
 module ApplicationHelper
-    def example(options={}, &block)
+
+  #
+  # Authentication and Role
+  #
+  include SessionsHelper
+
+  def example(options={}, &block)
     out = render :partial => 'home/header', :locals => {:options => options}
     out << capture(&block)
     out
-    end
-
-
+  end
 
   #experiments
-   def button_tag(name, icon, options={})
+  def button_tag(name, icon, options={})
 
     icon_path = icon
     img = tag("img", :src => icon_path,
@@ -16,8 +20,9 @@ module ApplicationHelper
     img << ' ' + name
     options.merge!("type" => 'submit') unless options[:type]
     content_tag(:button, img, options)
-   end
-    def img_link_tag(name, icon, options={})
+  end
+   
+  def img_link_tag(name, icon, options={})
     #icon_path = '/stylesheets/blueprint/plugins/buttons/icons/'
     icon_path = icon
     img = tag("img", :src => icon_path,
@@ -33,4 +38,5 @@ module ApplicationHelper
   #      <%= button_tag 'Login', 'key.png', :class => 'button positive'%>
   #      <%= img_link_tag 'Cancel', 'cross.png', :href => '/', :class => 'button negative' %>
   #  </fieldset>
+
 end

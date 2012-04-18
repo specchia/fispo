@@ -1,0 +1,264 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.scss.erb.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* begin Menu */
+/* menu structure */
+
+
+/* begin Menu */
+/* menu structure */
+
+ul.fs-m1hmenu {
+  a {
+    outline: none;
+    position: relative;
+    z-index: 11;
+    &:link, &:visited, &:hover {
+      outline: none;
+      position: relative;
+      z-index: 11; } }
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style-type: none;
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style-type: none; }
+  li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 5;
+    background: none;
+    &:hover {
+      z-index: 10000;
+      white-space: normal; }
+    li {
+      float: none;
+      width: auto; }
+    &:hover>ul {
+      visibility: visible;
+      top: 100%; }
+    li:hover>ul {
+      top: 0;
+      left: 100%; } }
+  &:after {
+    content: ".";
+    height: 0;
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    clear: both; }
+  ul {
+    &:after {
+      content: ".";
+      height: 0;
+      display: block;
+      visibility: hidden;
+      overflow: hidden;
+      clear: both; }
+    min-height: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    background-image: url('spacer.gif');
+    padding: 10px 30px 30px 30px;
+    margin: -10px 0 0 -30px;
+    &.fs-m1hmenu-left-to-right {
+      right: auto;
+      left: 0;
+      margin: -10px 0 0 -30px; }
+    &.fs-m1hmenu-right-to-left {
+      left: auto;
+      right: 0;
+      margin: -10px -30px 0 0; }
+    ul {
+      padding: 30px 30px 30px 10px;
+      margin: -30px 0 0 -10px;
+      margin-left: -11px;
+      z-index: -1;
+      &.fs-m1hmenu-left-to-right {
+        right: auto;
+        left: 0;
+        padding: 30px 30px 30px 10px;
+        margin: -30px 0 0 -10px;
+        margin-left: -11px; }
+      &.fs-m1hmenu-right-to-left {
+        left: auto;
+        right: 0;
+        padding: 30px 10px 30px 30px;
+        margin: -30px -10px 0 0;
+        margin-right: -11px; } } }
+  min-height: 0;
+  li li:hover>ul {
+    &.fs-m1hmenu-left-to-right {
+      right: auto;
+      left: 100%; }
+    &.fs-m1hmenu-right-to-left {
+      left: auto;
+      right: 100%; } }
+  position: relative;
+  padding: 12px 3px 0 3px;
+  float: left; }
+
+/* end menu structure */
+
+/* menu bar */
+
+.fs-m1nav {
+  margin: 0 auto;
+  min-height: 40px;
+  z-index: 100;
+  margin: 0 4px -41px;
+  width: auto;
+  top: 35px;
+  &:before, &:after { /*
+    background-image: url('fe_m1nav.png'); */}
+  &:before {
+    right: 5px; }
+  &:after {
+    width: 5px; } }
+
+/* end menu bar */
+
+.fs-m1nav-outer {
+  position: absolute;
+  width: 100%; }
+
+.fs-m1nav-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: auto; }
+
+.fs-m1nav-inner {
+  margin: 0 4px; }
+
+/* end Menu */
+
+/* begin MenuItem */
+
+ul.fs-m1hmenu > li > a {
+  position: relative;
+  display: block;
+  height: 29px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0 17px;
+  line-height: 29px;
+  text-align: center;
+  &:before, &:after {
+    position: absolute;
+    display: block;
+    content: ' ';
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url('fe_m1menuitem.png'); }
+  &:before {
+    left: 0;
+    right: 10px;
+    background-position: top left; }
+  &:after {
+    width: 10px;
+    right: 0;
+    background-position: top right; } }
+
+.fs-m1hmenu a {
+  font-family: Arial, Helvetica, Sans-Serif;
+  font-size: 12px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:link, &:visited, &:hover {
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-size: 12px;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase; } }
+
+ul {
+  &.fs-m1hmenu>li>a.active {
+    &:before {
+      background-position: bottom left; }
+    &:after {
+      background-position: bottom right; }
+    color: #474338; }
+  &.fs-m1hmenu > li {
+    > a:hover:before, &:hover > a:before {
+      background-position: center left; }
+    > a:hover:after, &:hover > a:after {
+      background-position: center right; } }
+  &.fs-m1hmenu>li>a:hover {
+    color: #2B0C08; }
+  &.fs-m1hmenu>li {
+    &:hover>a {
+      color: #2B0C08; }
+    margin-left: 2px;
+    &:first-child {
+      margin-left: 0; } } }
+
+/* end MenuItem */
+
+/* begin MenuSeparator */
+
+/* end MenuSeparator */
+
+/* begin MenuSubItem */
+
+.fs-m1hmenu ul {
+  a {
+    display: block;
+    white-space: nowrap;
+    height: 25px;
+    background-image: url('fe_m1subitem.png');
+    background-position: left top;
+    background-repeat: repeat-x;
+    border-width: 1px;
+    border-style: solid;
+    border-top-width: 0;
+    border-color: #B5B0A1;
+    min-width: 7em;
+    text-align: left;
+    text-decoration: none;
+    line-height: 25px;
+    color: #0B4856;
+    text-transform: none;
+    margin: 0;
+    padding: 0 17px; }
+  > li:first-child > a {
+    border-top-width: 1px; }
+  a {
+    &:link, &:visited, &:hover, &:active {
+      text-align: left;
+      text-decoration: none;
+      line-height: 25px;
+      color: #0B4856;
+      text-transform: none;
+      margin: 0;
+      padding: 0 17px; } }
+  li {
+    a {
+      &:hover {
+        color: #000000;
+        background-position: left bottom;
+        border-color: #A19A87;
+        border-top-width: 1px !important; }
+      &.fs-m1hmenu-before-hovered {
+        border-bottom-width: 0 !important; } }
+    &:hover > a {
+      color: #000000;
+      background-position: left bottom;
+      border-color: #A19A87;
+      border-top-width: 1px !important; } } }
+
+/* end MenuSubItem */

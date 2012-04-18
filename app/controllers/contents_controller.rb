@@ -1,5 +1,10 @@
 class ContentsController < ApplicationController
-   before_filter :authenticate_account!, :except => [:show, :index]
+  #devise
+  before_filter :authenticate_account!, :except => [:show, :index]
+
+  #only Requiring the right user to change own contents
+  before_filter :correct_user, :only => [:edit, :update, :delete, :destroy]
+
   # GET /contents
   # GET /contents.json
   def index
@@ -73,6 +78,8 @@ class ContentsController < ApplicationController
   # DELETE /contents/1
   # DELETE /contents/1.json
   def destroy
+    reroute() unless current_account.is? :admin
+    
     @content = Content.find(params[:id])
     @content.destroy
 
@@ -81,4 +88,23 @@ class ContentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+
+  private
+
+    def correct_user
+      #TODO: field content.account_id does not exist
+      return signed_in_and_collaboratore?
+
+      @account = Account.find(@content.account_id)  
+      #reroute() unless current_account?(@account) or signed_in_and_master?
+      reroute() unless current_account?(@account) or signed_in_and_collaboratore?
+    end
+
+    def reroute()
+      flash[:notice] = "Solamente la persona che ha creato pu&ograve; modificare od eliminare. (pi&ugrave; lo staff di FiscoSport)"
+      redirect_to(contents_path)
+    end
+
 end
