@@ -1,4 +1,35 @@
-<h1>Account#show</h1>
-<   <p>
-    #  Account: <%= @account.username %>
-    </p>
+
+<%#cancan %>
+
+<h3>Credenziale utente</h3>
+<h2><%= @account.username %></h2>
+ 
+<%= link_to_if(can?(:update, @account), "Edit", edit_account_path(@account)) %> |
+<%= link_to_if(can?(:delete, @account), "Delete", account_path(@account), :confirm => "Are you sure?", :method => :delete) {} %>
+ 
+<table class="one-column-emphasis">
+	<tbody>
+		<tr>
+			<td class="oce-first">Email:</td>
+			<td><%= @account.email %></td>
+		</tr>
+		<tr>
+			<td class="oce-first">Role:</td>
+			<td><%= @account.roles.first.name %></td>
+		</tr>
+	<% if can?(:see_timestamps,Account) %>
+		<tr>
+			<td class="oce-first">Created at:</td>
+			<td><%= @account.created_at %></td>
+		</tr>
+		<tr>
+			<td class="oce-first">Last Sign In:</td>
+			<td><%= @account.last_sign_in_at %></td>
+		</tr>
+		<tr>
+			<td class="oce-first">Sign In Count:</td>
+			<td><%= @account.sign_in_count %></td>
+		</tr>
+	<% end %>
+	</tbody>
+</table>
