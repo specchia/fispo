@@ -7,6 +7,10 @@ class ContentsController < ApplicationController
   #cancan
   load_and_authorize_resource
 
+   def current_user
+     return current_account
+   end
+
 
   # GET /contents
   # GET /contents.json

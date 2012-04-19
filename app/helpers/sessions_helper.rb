@@ -84,6 +84,9 @@ module SessionsHelper
   def get_account
     @current_account = current_account
   end
+  def get_user
+    @current_account = current_account
+  end
 
   def deny_access_destroy
     flash[:notice] = "Spiacenti. Solamente un manager pu&ograve; eliminare dati. Per favore, contatta MariaCristina per farlo."

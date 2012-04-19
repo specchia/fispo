@@ -13,6 +13,11 @@ class AccountController < ApplicationController
   #The load_and_authorize_resource filter provided by CanCan actually does this accessibility filtering for you to keep things DRY and it recognizes collections as of this issue fix. 
   #The other two filters – get_account and accessible_roles – are in SessionHelper
 
+   # in ApplicationController
+   def current_ability
+     @current_ability ||= AccountAbility.new(current_account)
+   end
+
   # GET /accounts
   # GET /accounts.xml
   # GET /accounts.json                                       HTML and AJAX
