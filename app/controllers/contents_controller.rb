@@ -99,7 +99,7 @@ class ContentsController < ApplicationController
     def correct_user
       #TODO: field content.account_id does not exist
       return signed_in_and_collaboratore?
-      @content = Content.find(params[:id])
+
       @account = Account.find(@content.account_id)  
       #reroute() unless current_account?(@account) or signed_in_and_master?
       reroute() unless current_account?(@account) or signed_in_and_collaboratore?

@@ -1,0 +1,319 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+
+/*              ------------------------------- cambiamenti  per la seconda barra menu ---- */
+/* menu structure */
+
+ul.fs-hmenus a, ul.fs-hmenus a:link, ul.fs-hmenus a:visited, ul.fs-hmenus a:hover
+{
+   outline: none;
+   position: relative;
+   z-index: 11;
+}
+
+ul.fs-hmenus, ul.fs-hmenus ul
+{
+   display: block;
+   margin: 0;
+   padding: 0;
+   border: 0;
+   list-style-type: none;
+}
+
+ul.fs-hmenus li
+{
+   margin: 0;
+   padding: 0;
+   border: 0;
+   display: block;
+   float: left;
+   position: relative;
+   z-index: 5;
+   background: none;
+}
+
+ul.fs-hmenus li:hover{
+   z-index: 10000;
+   white-space: normal;
+}
+ul.fs-hmenus li li{
+   float: none;
+   width: auto;
+}
+ul.fs-hmenus li:hover>ul {
+   visibility: visible;
+   top: 100%;
+}
+ul.fs-hmenus li li:hover>ul {
+   top: 0;
+   left: 100%;
+}
+ul.fs-hmenus:after, ul.fs-hmenus ul:after
+{
+   content: ".";
+   height: 0;
+   display: block;
+   visibility: hidden;
+   overflow: hidden;
+   clear: both;
+}
+ul.fs-hmenus, ul.fs-hmenus ul {
+   min-height: 0;
+}
+
+ul.fs-hmenus ul
+{
+   visibility: hidden;
+   position: absolute;
+   z-index: 10;
+   left: 0;
+   top: 0;
+   background-image: url(<%= asset_path'spacer.gif'%>);
+   padding: 10px 30px 30px 30px;
+   margin: -10px 0 0 -30px;
+}
+
+ul.fs-hmenus ul.fs-hmenus-left-to-right {
+   right: auto;
+   left: 0;
+   margin: -10px 0 0 -30px;
+}
+ul.fs-hmenus ul.fs-hmenus-right-to-left {
+   left: auto;
+   right: 0;
+   margin: -10px -30px 0 0;
+}
+
+ul.fs-hmenus ul ul
+{
+   padding: 30px 30px 30px 10px;
+   margin: -30px 0 0 -10px;
+   margin-left: -11px;
+   z-index: -1;
+}
+
+ul.fs-hmenus ul ul.fs-hmenus-left-to-right
+{
+   right: auto;
+   left: 0;
+   padding: 30px 30px 30px 10px;
+   margin: -30px 0 0 -10px;
+   margin-left: -11px;
+}
+
+ul.fs-hmenus ul ul.fs-hmenus-right-to-left
+{
+   left: auto;
+   right: 0;
+   padding: 30px 10px 30px 30px;
+   margin: -30px -10px 0 0;
+   margin-right: -11px;
+}
+
+ul.fs-hmenus li li:hover>ul.fs-hmenus-left-to-right {
+   right: auto;
+   left: 100%;
+}
+ul.fs-hmenus li li:hover>ul.fs-hmenus-right-to-left {
+   left: auto;
+   right: 100%;
+}
+
+ul.fs-hmenus{
+   position:relative;
+   padding: 0 0 0 0;
+   float: left;
+}
+
+/* end menu structure */
+/* menu bar */
+
+.fs-snav
+{
+   margin:0 auto;
+   min-height: 40px;
+   z-index: 100;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+.fs-snav:before, .fs-snav:after{
+   background-image: url(<%= asset_path'navs.png'%>);
+}
+.fs-snav:before{
+   right: 5px;
+}
+.fs-snav:after{
+   width: 5px;
+}
+/* end menu bar */
+.fs-snav-outer{
+   position:absolute;
+   width:100%;
+}
+
+/* end Menu */
+
+
+/* begin MenuItem */
+ul.fs-hmenus>li>a
+{
+   position: relative;
+   display: block;
+   height: 40px;
+   cursor: pointer;
+   text-decoration: none;
+   color: #666666;
+   padding: 0 14px;
+   line-height: 40px;
+   text-align: center;
+}
+
+ul.fs-hmenus>li>a:before, ul.fs-hmenus>li>a:after
+{
+   position: absolute;
+   display: block;
+   content:' ';
+   top: 0;
+   bottom:0;
+   z-index: -1;
+  /* background-image: url('<%= asset_path'menuitems.png'%>); */
+}
+
+ul.fs-hmenus>li>a:before
+{
+   left: 0;
+   right: 0;
+   background-position: top left;
+}
+
+ul.fs-hmenus>li>a:after
+{
+   width: 0;
+   right: 0;
+   background-position: top right;
+}
+
+.fs-hmenus a, .fs-hmenus a:link, .fs-hmenus a:visited, .fs-hmenus a:hover
+{
+   text-align: left;
+   text-decoration: none;
+}
+
+ul.fs-hmenus>li>a.active:before {
+   background-position: bottom left;
+}
+ul.fs-hmenus>li>a.active:after {
+   background-position: bottom right;
+}
+ul.fs-hmenus>li>a.active {
+   color: #003399;
+}
+
+ul.fs-hmenus>li>a:hover:before, ul.fs-hmenus>li:hover>a:before {
+   background-position: center left;
+}
+ul.fs-hmenus>li>a:hover:after, ul.fs-hmenus>li:hover>a:after {
+   background-position: center right;
+}
+ul.fs-hmenus>li>a:hover, ul.fs-hmenus>li:hover>a{
+   color: #DBDBDB;
+}
+
+/* end MenuItem */
+/* begin MenuSeparator */
+ul.fs-hmenus>li:before
+{
+   position:absolute;
+   display: block;
+   content:' ';
+   top:0;
+   left:  -1px;
+   width:1px;
+   height: 40px;
+   background: url(<%= asset_path'menuseparator.png'%>) center center no-repeat;
+}
+
+ul.fs-hmenus>li {
+   margin-left:1px;
+}
+ul.fs-hmenus>li:first-child {
+   margin-left:0;
+}
+
+ul.fs-hmenus>li:first-child:before{
+   display:none;
+}
+/* end MenuSeparator */
+
+/* begin MenuSubItem */
+.fs-hmenus ul a
+{
+   display: block;
+   white-space: nowrap;
+   height: 24px;
+   background-image: url(<%= asset_path'subitem.png'%>);
+   background-position: left top;
+   background-repeat: repeat-x;
+   border-width: 1px;
+   border-style: solid;
+   border-top-width: 0;
+   border-color: #0066DB;
+   min-width: 7em;
+   text-align: left;
+   text-decoration: none;
+   line-height: 24px;
+   color: #00397A;
+   margin:0;
+   padding: 0 22px;
+}
+
+.fs-hmenus ul>li:first-child>a
+{
+   border-top-width: 1px;
+}
+
+.fs-hmenus ul a:link, .fs-hmenus ul a:visited, .fs-hmenus ul a:hover, .fs-hmenus ul a:active
+{
+	text-align: left;
+	text-decoration: none;
+	line-height: 24px;
+	color: #353535;
+	margin:0;
+	padding: 0 22px;
+}
+
+.fs-hmenus ul li a:hover
+{
+	color: #061E32;
+	background-position: left bottom;
+	border-color: #434343;
+	border-top-width: 1px !important;
+}
+
+.fs-hmenus ul li a.fs-hmenus-before-hovered
+{
+   border-bottom-width: 0 !important;
+}
+
+.fs-hmenus ul li:hover>a
+{
+	color: #061E32;
+	background-position: left bottom;
+	border-color: #5B5B5B;
+	border-top-width: 1px !important;
+}
+
+/* end MenuSubItem */
+
+/*              ------------------------------- fine  cambiamenti seconda barra ---- */

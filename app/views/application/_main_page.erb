@@ -1,0 +1,37 @@
+<%# PAGINA DEI CONTENUTI --->>> BACK END  %>
+<div class="be-box be-sheet">
+    <div class="be-box-body be-sheet-body">
+
+<%# barra dei menu  %> <%= render 'menu_bar' %>
+
+            <div class="cleared reset-box"></div>
+
+            <div class="be-layout-wrapper">
+                <div class="be-content-layout">
+                    <div class="be-content-layout-row">
+                        <div class="be-layout-cell be-content">
+                            <div class="be-box be-post">
+                                <div class="be-box-body be-post-body">
+                                    <div class="be-post-inner be-article">
+
+                                        <%# i contenuti        %>
+
+                                        <%= yield %>
+
+
+                                        <div class="cleared"></div>
+                                    </div>
+
+		                            <div class="cleared"></div>
+                                </div>
+                            </div>
+
+                            <div class="cleared"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cleared"></div>
+    </div>
+</div>
+<div class="cleared"></div>

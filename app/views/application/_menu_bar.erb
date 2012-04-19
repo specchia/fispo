@@ -1,20 +1,14 @@
- <div class="fs-bar fs-nav">
-<div class="fs-nav-outer">
-  <div class="fs-nav-wrapper">
+<div class="be-bar be-m1nav">
+<div class="be-m1nav-outer">
 
-			<%= render_navigation :level => 1 %>
+      <%= render_navigation :context => :backend , :level => 1  %>
 
-
-
-
-   </div>
 </div>
 </div>
+<div class="be-bar be-m2nav">
+<div class="be-m2nav-outer">
 
+      <%= render_navigation :context => :backend , :level => 2  %>
 
-  <div class="fs-nav-wrapper">
-    <div class="fs-bar fs-snav">
-          <%= render_navigation :level =>2 %>
-    </div>
-
+</div>
 </div>

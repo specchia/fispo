@@ -1,7 +1,7 @@
 Fispo::Application.routes.draw do
 
   #root :to => 'page#home'
-  root :to => "home#index"
+  root :to => "home#main"
 
   #add automaticalyy by forem install
   mount Forem::Engine, :at => "/forums"
@@ -9,9 +9,12 @@ Fispo::Application.routes.draw do
   resources :roles
   resources :sections
   #match "s:id" => redirect("/sections/%{id}")
+
   resources :top_sections
   resources :contents
+  resources :sections
   resources :users
+
   #member
 
   #AUTHENTICATION devise
@@ -25,6 +28,7 @@ Fispo::Application.routes.draw do
 
 
   get "/home/subscription"
+
   resources :home do
     collection do
       get :show
@@ -35,6 +39,7 @@ Fispo::Application.routes.draw do
       get :modulistica
     end
     member do
+
        get :show_article
     end
   end
