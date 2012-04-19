@@ -9,16 +9,6 @@ class Ability
     #roles :admin, :manager, :collaboratore, :abbonato 
     if account.role? :admin
       can :manage, :all   #[Role, ]
-<<<<<<< HEAD
-    elsif account.role? :manager
-      can :read, :all
-      can :manage, [Account, User, Content, Section, TopSection]
-    elsif account.role? :collaboratore
-      can :read, :all
-      can :manage, [Account, User, Content]
-    elsif account.role? :abbonato
-      can :read, :all     #can access the index or show action of either of those models
-=======
       can :see_timestamps, Account
     elsif account.role? :manager
       can :read, :all
@@ -31,7 +21,6 @@ class Ability
     elsif account.role? :abbonato
       can :read, :all     #can access the index or show action of either of those models
       can :see_timestamps, Account, :id => account.id      
->>>>>>> origin/domthu-roles
       # manage products, assets he owns
       can :manage, Content do |content|
         content.try(:owner) == account
@@ -42,13 +31,9 @@ class Ability
     else
       #can :read, :all
       can :read, [Content]
-<<<<<<< HEAD
-    end
-=======
       can :see_timestamps, Account, :id => account.id      
     end
 
->>>>>>> origin/domthu-roles
   end
 end
 
