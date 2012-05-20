@@ -10,7 +10,7 @@ class HomeController < ApplicationController
   def show
     @section = Section.find(params[:id])
     @top_sections = TopSection.all
-    @contentz =   Content.find(:all, :conditions => ["section_id=?", params[:id]], :include => [:section,:top_section])
+    @contents =   Content.find(:all, :conditions => ["section_id=?", params[:id]], :include => [:section,:top_section])
   end
 
   def main
@@ -39,9 +39,8 @@ class HomeController < ApplicationController
         @contents =   Content.find(:all, :conditions => ["section_id=?",16], :include => [:section,:top_section])
   end
   def modulistica
-            @section = Section.find(params[:id])
-        @top_sections = TopSection.all
-        @contents =   Content.find(:all, :conditions => ["section_id=?", params[:id]], :include => [:section,:top_section])
+
+        @contents =   Content.find(:all, :conditions => ["section_id=?",18], :include => [:section,:top_section])
   end
 
 end

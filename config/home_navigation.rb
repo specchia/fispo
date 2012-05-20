@@ -78,10 +78,10 @@ SimpleNavigation::Configuration.run do |navigation|
 
 
       primary.item :home, 'Sommario', main_home_index_path , :highlights_on => :subpath do |sub_nav|
-          sub_nav.item :s_1, 'Indice','/home/1'
+          sub_nav.item :s_1, 'Indice',main_home_index_path
           sub_nav.item :s_2, 'Approfondimenti','/home/2'
-          sub_nav.item :s_5, 'Eventi','/home/5'
-          sub_nav.item :s_6, 'Quesiti','/home/6'
+          sub_nav.item :s_5, 'Eventi','/home/eventi'
+          sub_nav.item :s_6, 'Quesiti','/home/quesiti'
           sub_nav.item :v_0, 'Abbonamenti',subscription_home_index_path
         #  sub_nav.item :special, '' , main_home_index_path , :highlights_on => /home\/(\d)+\/show_article/
          # sub_nav.item :special, 'Ritorna' , main_home_index_path,    :highlights_on => /home\/[0-9]+\/show_article/
@@ -91,15 +91,15 @@ SimpleNavigation::Configuration.run do |navigation|
       end
 
        primary.item :home2, 'Vademecum', vademecum_home_index_path , :highlights_on => :subpath do |sub_nav|
-          sub_nav.item :s_16, "Vademecum 'Sinibaldi'",'/home/16'
-          sub_nav.item :s_17, 'Guide','/home/16'
+          sub_nav.item :s_16, "Vademecum ",'/home/16'
+          sub_nav.item :s_17, 'Guide','/home/17'
 
 
           primary.dom_class = 'fs-m1hmenu'
          sub_nav.dom_class = 'fs-m2hmenu'
        end
 
-        primary.item :home3, 'Modulistica',modulistica_home_index_path , :highlights_on => :subpath do |sub_nav|
+        primary.item :home3, 'Modulistica',modulistica_home_index_path   , :highlights_on => :subpath do |sub_nav|
           sub_nav.item :s_4, "Previdenza '",'/home/4'
           sub_nav.item :s_3, 'Lavoro','/home/3'
 
@@ -109,7 +109,7 @@ SimpleNavigation::Configuration.run do |navigation|
 
 
 
-          primary.item :users, 'BACK END ---> (x test)', books_path
+          primary.item :users, 'Vai al Back-End ->', books_path
           primary.dom_class = 'fs-m1hmenu'
 
 

@@ -95,12 +95,13 @@ class ContentsController < ApplicationController
 
     def correct_user
       #TODO: field content.account_id does not exist
-      return signed_in_and_collaboratore?
+      #return signed_in_and_collaboratore?
 
-      @account = Account.find(@content.account_id)  
+     #@account = Account.find(@content.account_id)
       #reroute() unless current_account?(@account) or signed_in_and_master?
-      reroute() unless current_account?(@account) or signed_in_and_collaboratore?
-    end
+     # reroute() unless current_account?(@account) or signed_in_and_collaboratore?
+       #     redirect_to(contents_path)
+       end
 
     def reroute()
       flash[:notice] = "Solamente la persona che ha creato pu&ograve; modificare od eliminare. (pi&ugrave; lo staff di FiscoSport)"

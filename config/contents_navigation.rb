@@ -89,11 +89,9 @@ SimpleNavigation::Configuration.run do |navigation|
 
         end
 
-           primary.item :users, 'BACK END ---> (x test)', books_path
+           primary.item :users, 'Vai al Back-End', books_path
                primary.dom_class = 'fs-m1hmenu'
 
-           primary.item :users, 'FRONT END ---> (x test)', main_home_index_path
-                         primary.dom_class = 'fs-m1hmenu'
 
 
   end

@@ -100,7 +100,7 @@ SimpleNavigation::Configuration.run do |navigation|
 
       end
 
-      primary.item :contents, 'Articoli (interfaccia FE per prova ', contents_path do |sub_nav|
+      primary.item :contents, 'Articoli', contents_path do |sub_nav|
         sub_nav.item :c1, 'Articoli (all) ',  contents_path
         sub_nav.item :c2, 'Articoli (new) ',  new_content_path
 
@@ -108,7 +108,8 @@ SimpleNavigation::Configuration.run do |navigation|
         sub_nav.dom_class = 'be-m2hmenu'
 
       end
-
+     primary.item :contents, 'Ritorna al Front End', main_home_index_path
+       primary.dom_class = 'be-m1hmenu'
 
   end
 end

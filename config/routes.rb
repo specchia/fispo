@@ -14,7 +14,9 @@ Fispo::Application.routes.draw do
   root :to => "home#main"
 
  get "/home/subscription"
-
+  get "home/eventi"
+  get "home/quesiti"
+  get "home/modulistica"
 
   resources :books do
     collection do

@@ -11,11 +11,12 @@
         <% @contents.each do |contenuto| %>
 <h3 class="fs-postheader" > <%= contenuto.titolo %>  </h3>
    <div class="fs-postheadericons "><%# @categoria.categoria  %></div>
+          <br />
    <div class="fs-postcontent" >   <%= contenuto.testo %> </div>
    <br />
 
 <div class="fs-postheadericons "> <%# @/sections/1(contenuto.categorie_id ) %>  </div>
-
+      --- debug --- sono su home/index  -----
    <% end %>
         <p><a href="#"><span><span style="font-family: Verdana;">Read more</span></span></a></p>
     </div>

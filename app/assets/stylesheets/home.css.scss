@@ -24,6 +24,9 @@
 
 .fs-postcontent {
   font-family: Georgia, "Times New Roman", Times, Serif;
+  font-size: 12px;
+  color: black;
+  min-height: 60px;
   li, table {
     font-family: Georgia, "Times New Roman", Times, Serif; }
   a {
@@ -799,9 +802,7 @@ span.fs-button-wrapper > {
   vertical-align: middle; }
 
 span.fs-button-wrapper {
-  img {
-    margin: 0;
-    vertical-align: middle; }
+
   vertical-align: middle;
   display: inline-block;
   position: relative;
@@ -813,7 +814,10 @@ span.fs-button-wrapper {
   max-width: 992px;
   margin: 0;
   padding: 0;
-  z-index: 0; }
+  z-index: 0;
+  img {
+    margin: 0;
+    vertical-align: middle;}}
 
 .firefox2 span.fs-button-wrapper {
   display: block;
@@ -825,7 +829,20 @@ input, select, textarea {
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  }
+
+  #content_riassunto, #content_titolo, #content_testo, #content_titolo_no_format, #content_testo_no_format, #content_riassunto_no_format {
+  width: 80%;}
+ label{ /*
+  width: 4em;
+  float: left;
+  text-align: right;
+  margin-right: 0.5em;
+  display: block;*/
+  font-weight: bold;
+  color: #0F6375;
+}
 
 div.fs-block select {
   width: 96%; }
@@ -1380,7 +1397,6 @@ pre {
   font-family: Georgia, "Times New Roman", Times, Serif;
   font-size: 11px;
   letter-spacing: 1px;
-  color: #990000;
   a {
     font-family: Georgia, "Times New Roman", Times, Serif;
     font-size: 11px;
@@ -1402,6 +1418,8 @@ pre {
       text-decoration: underline;
       color: #1BAFD0; } }
   padding: 1px; }
+
+
 
 /* end PostIcons, PostHeaderIcons */
 
@@ -1693,3 +1711,15 @@ div.fs-footer img {
 /* begin LayoutCell, sidebar2 */
 
 /* end LayoutCell, sidebar2 */
+  #section{
+      background-color: #990000;
+       color: #ffffff; }
+  #x_nome{
+      font-size: 11px;
+      font-weight: bold;
+     }
+  #y_nome{
+     font-size: 11px;
+     font-weight: normal;
+     font-style:italic;
+  }

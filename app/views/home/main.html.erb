@@ -1,18 +1,24 @@
-
+  <p id="notice"><%= notice %></p>
     <%@contents.each do |contenuto| %>
-            <div class="fs-postheadericons "><img src=<%= asset_path "rails.png"%> style align="left">
+        <div class="fs-postheadericons "><img src=<%= asset_path contenuto.immagine_url%> style align="left">
+        </div>
+        <div class="fs-blocktitolo" > <h4 class="t">  <%= contenuto.titolo %>  </h4>
+        </div><br />
+        <span id="section"><%=  contenuto.section.sezione  %> >> </span>
+        <span id="x_nome"><%=  contenuto.titolo_no_format  %>>></span>
+          <span id="x_y_nome"><%=  contenuto.riassunto_no_format  %></span>
+         <br />  <br />
 
-            sezioni: <%= contenuto.section.top_section.sezione_top  %> + <%= contenuto.section.sezione  %> + <%= contenuto.id  %>
-            </div>
-            <div class="fs-blocktitolo" > <h3 class="t">  <%= contenuto.titolo %>  </h3></div>
             <div class="fs-postcontent" >   <%= contenuto.riassunto %> </div>
-            <div class="fs-blockcontent-body" >   <%= contenuto.testo %> </div>
+        <br />
+         <%#     <div class="fs-blockcontent-body" >   <%= contenuto.testo %> <%#</div>%>
 
                               <span class="fs-button-wrapper">
                               <span class="fs-button-l"> </span>
                               <span class="fs-button-r"> </span>
                         <%= link_to "Leggi >>", show_article_home_path(contenuto) , :action => "show_article" , :class => 'fs-button'  %>
                               </span>
-
+        <br />
+         <br />
     <% end %>
 
