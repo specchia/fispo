@@ -1,0 +1,4 @@
+ho aggiunto qualche dato di esempio nel dump  fispo_test_dati.sql basta che importi nel database , per loggarti usa:
+username: admin@admin.com 
+pass: s
+bye
